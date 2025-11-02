@@ -10,7 +10,7 @@ class ModeloBooleano:
         self.carregar_indice()
 
     def carregar_indice(self):
-        """Carrega o índice do arquivo frequencies_summary.json"""
+        # Carrega o índice do arquivo frequencies_summary.json
         src_dir = os.path.dirname(__file__)
         raiz = os.path.abspath(os.path.join(src_dir, '..'))
         freq_json_path = os.path.join(raiz, 'results', 'frequencies_summary.json')
@@ -34,24 +34,24 @@ class ModeloBooleano:
                     self.indice[termo].add(doc_id)
 
     def buscar_termo(self, termo: str) -> Set[str]:
-        """Busca documentos que contêm um termo específico"""
+        # Busca documentos que contêm um termo específico
         return self.indice.get(termo, set())
 
     def operador_and(self, conjunto1: Set[str], conjunto2: Set[str]) -> Set[str]:
-        """Implementa o operador AND entre dois conjuntos de documentos"""
+        # Implementa o operador AND entre dois conjuntos de documentos
         return conjunto1 & conjunto2
 
     def operador_or(self, conjunto1: Set[str], conjunto2: Set[str]) -> Set[str]:
-        """Implementa o operador OR entre dois conjuntos de documentos"""
+        # Implementa o operador OR entre dois conjuntos de documentos
         return conjunto1 | conjunto2
 
     def operador_not(self, conjunto: Set[str]) -> Set[str]:
-        """Implementa o operador NOT para um conjunto de documentos"""
+        # Implementa o operador NOT para um conjunto de documentos
         todos_docs = set(self.doc_ids.values())
         return todos_docs - conjunto
 
     def processar_consulta(self, consulta: str) -> List[str]:
-        """Processa uma consulta booleana e retorna a lista de documentos que correspondem"""
+        # Processa uma consulta booleana e retorna a lista de documentos que correspondem
         # Divide a consulta em tokens
         tokens = consulta.lower().split()
         

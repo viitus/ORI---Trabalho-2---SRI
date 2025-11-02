@@ -9,10 +9,12 @@
     "abordavam",
     "abril",
     "abstract",
+    "acao",
     "acces",
     "according",
     "aceitando-se",
     "aceito",
+    "acesso",
     "achado",
     "acima",
     "acometido",
@@ -54,7 +56,9 @@
     "al",
     "alane",
     "alberto",
+    "alcancar",
     "alem",
+    "alerta",
     "algico",
     "alguma",
     "aline",
@@ -88,6 +92,7 @@
     "analysi",
     "analyze",
     "analyzed",
+    "andre",
     "angela",
     "anhanguera",
     "animai",
@@ -101,6 +106,7 @@
     "aplica",
     "aplicabilidade",
     "aplicacao",
+    "aplicacoe",
     "aplicada",
     "aplicado",
     "aplicou-se",
@@ -110,8 +116,10 @@
     "applicability",
     "application",
     "approache",
+    "aprendida",
     "apresenta",
     "apresenta-se",
+    "apresentada",
     "apresentado",
     "apresentar",
     "apresentaram",
@@ -135,11 +143,14 @@
     "associada",
     "associado",
     "associated",
+    "assume",
     "assumpcao",
+    "atender",
     "ativa",
     "atividade",
     "ato",
     "atrave",
+    "atua",
     "atualizac",
     "atualizado",
     "au",
@@ -153,10 +164,13 @@
     "ausencia",
     "autocuidado",
     "autoimune",
+    "automatizado",
     "automedi",
+    "automotiva",
     "autor",
     "autorrelatada",
     "autorrelataram",
+    "auxiliando",
     "auxiliare",
     "available",
     "avaliacao",
@@ -168,6 +182,7 @@
     "avaliar",
     "avaliassem",
     "avd",
+    "aviacao",
     "background",
     "banco",
     "barro",
@@ -239,7 +254,9 @@
     "cause",
     "cavalcante",
     "cc",
+    "central",
     "centro",
+    "certo",
     "chacara",
     "chalot",
     "characterized",
@@ -255,6 +272,7 @@
     "cinesioterapia",
     "cionado",
     "circunferencia",
+    "clareza",
     "classe",
     "classificacao",
     "classification",
@@ -268,6 +286,7 @@
     "cognitivo",
     "colegio",
     "college",
+    "comando",
     "common",
     "comorbidade",
     "comorbiditie",
@@ -279,13 +298,17 @@
     "completamente",
     "completo",
     "complexa",
+    "complexo",
     "componente",
     "composto",
     "compreender",
     "compreensao",
+    "compreensivei",
     "comprometer",
     "comprometimento",
+    "computacional",
     "comum",
+    "comunicacao",
     "comunidade",
     "con",
     "con-fatore",
@@ -302,10 +325,12 @@
     "conduzido",
     "confiabilidade",
     "confianca",
+    "confiavei",
     "conflito",
     "conformidade",
     "conhecer",
     "conjuntivo",
+    "consegue",
     "conseguiu",
     "consenso",
     "consequence",
@@ -314,6 +339,7 @@
     "considerando",
     "considerando-se",
     "considering",
+    "consistente",
     "constant",
     "constante",
     "consulta",
@@ -341,6 +367,7 @@
     "correspondencia",
     "correspondente",
     "correspondeu",
+    "correta",
     "corte",
     "cortez",
     "crianca",
@@ -348,6 +375,7 @@
     "cristina",
     "criteria",
     "criterio",
+    "critico",
     "cronica",
     "cronici",
     "cuja",
@@ -358,22 +386,29 @@
     "dadepressao",
     "dado",
     "daily",
+    "danilo",
+    "dano",
     "daqualidade",
     "data",
     "database",
     "dec",
+    "decisao",
     "defined",
+    "definicao",
     "definida",
+    "definido",
     "dele",
     "demonstram",
     "demostraram",
     "denominado",
     "departamento",
+    "depende",
     "depoi",
     "depressao",
     "depressi",
     "depression",
     "derrota",
+    "desafio",
     "desconforto",
     "desconhecida",
     "descriptive",
@@ -383,6 +418,7 @@
     "descritore",
     "desempenho",
     "desenvolver",
+    "desenvolvida",
     "desfecho",
     "desperta-se",
     "destacam-se",
@@ -410,12 +446,15 @@
     "direita",
     "direito",
     "direta",
+    "diretamente",
     "direto",
+    "disciplina",
     "discomfort",
     "discrimina",
     "discriminacao",
     "discriminatorio",
     "disease",
+    "disponibilidade",
     "disponibilizado",
     "disponivei",
     "dissertacoe",
@@ -427,6 +466,7 @@
     "distribuido",
     "disturbio",
     "diverso",
+    "divinopoli",
     "divulgacao",
     "doenc",
     "doenca",
@@ -449,6 +489,7 @@
     "durante",
     "e-mail",
     "eaaa-r",
+    "economica",
     "editora",
     "eduardo",
     "educacao",
@@ -457,17 +498,20 @@
     "effect",
     "eficacia",
     "eficaz",
+    "eficiencia",
     "eficiente",
     "elaboracao",
     "electronic",
     "elege",
     "elegibilidade",
+    "elemento",
     "elencado",
     "elevado",
     "eligibility",
     "elsevier",
     "email",
     "embase",
+    "emer",
     "emil",
     "emocional",
     "encontrada",
@@ -475,6 +519,7 @@
     "endereco",
     "enfermagem",
     "enfermidade",
+    "engenharia",
     "english",
     "enough",
     "enquanto",
@@ -485,8 +530,12 @@
     "entreo",
     "entretanto",
     "entrevista",
+    "envolve",
+    "envolvido",
     "eou",
+    "equilibrar",
     "equivalencia",
+    "erro",
     "escala",
     "escasso",
     "esclareci",
@@ -498,6 +547,7 @@
     "especifica",
     "especifico",
     "esquerda",
+    "essencial",
     "estado",
     "estatistica",
     "estatisticamente",
@@ -525,6 +575,7 @@
     "event",
     "evento",
     "evidence",
+    "evolucao",
     "evoluir",
     "exame",
     "exao",
@@ -534,6 +585,7 @@
     "excluiram-se",
     "exclusivamente",
     "execucao",
+    "executar",
     "exer-cicio",
     "exercicio",
     "exercico",
@@ -547,20 +599,25 @@
     "expressivo",
     "extensao",
     "extensore",
+    "externa",
     "extracted",
     "extraido",
     "extremo",
+    "facilidade",
     "facilitar",
     "facilitate",
+    "facilite",
     "factor",
     "faculdade",
     "fadiga",
     "faixa",
+    "falha",
     "farmacia",
     "farmacolo",
     "farmacologico",
     "fatigue",
     "fato",
+    "fator",
     "fatore",
     "favorece",
     "faziam",
@@ -596,12 +653,14 @@
     "fonte",
     "forca",
     "form",
+    "formato",
     "found",
     "four",
     "fpm",
     "fraca",
     "fraco",
     "frequentemente",
+    "frota",
     "frustracao",
     "full",
     "funcao",
@@ -610,8 +669,14 @@
     "funcional",
     "funcionalidade",
     "funcionalidadefisica",
+    "funcoe",
     "functioning",
+    "fundamentai",
+    "futura",
+    "garantindo",
+    "garantir",
     "gative",
+    "gencia",
     "general",
     "generali",
     "generalizada",
@@ -622,6 +687,7 @@
     "gico",
     "goia",
     "graminha",
+    "grave",
     "grupo-controle",
     "guillemin",
     "guinte",
@@ -639,6 +705,8 @@
     "highlight",
     "hiperalgesia",
     "hipotetica",
+    "historico",
+    "homem",
     "homen",
     "hospital",
     "houve",
@@ -647,6 +715,8 @@
     "httpdxdoiorgjrbr",
     "httpsorcidorg",
     "hu",
+    "humana",
+    "humano",
     "humor",
     "hyperalgesia",
     "ibm",
@@ -656,7 +726,10 @@
     "idg",
     "idioma",
     "idiopatica",
+    "iec",
+    "ihm",
     "imagem",
+    "imediata",
     "imersao",
     "impact",
     "impacto",
@@ -681,17 +754,20 @@
     "increasing",
     "indexado",
     "indexed",
+    "indicadore",
     "indicar",
     "indice",
     "indireto",
     "individual",
     "individuo",
+    "industria",
     "infeliz",
     "inferiore",
     "inflamatorio",
     "influencia",
     "influenciando",
     "influenciar",
+    "informacoe",
     "ingle",
     "inglesa",
     "inicial",
@@ -702,12 +778,18 @@
     "instituido",
     "instrumento",
     "integra",
+    "integrante",
     "integrativa",
     "integrative",
+    "integridade",
     "intensidade",
+    "interagir",
+    "interaja",
     "interesse",
+    "interface",
     "interference",
     "interferencia",
+    "interna",
     "internacional",
     "international",
     "interrupcao",
@@ -718,6 +800,7 @@
     "interventional",
     "introducao",
     "introduction",
+    "intuitiva",
     "inventario",
     "investigar",
     "investir",
@@ -725,6 +808,7 @@
     "irrelevante",
     "isabel",
     "isi",
+    "iso",
     "isolamento",
     "isolation",
     "issue",
@@ -755,11 +839,14 @@
     "lhora",
     "liberacao",
     "licenc",
+    "licoe",
     "lidade",
     "lideraram",
     "life",
+    "ligada",
     "likert",
     "lilac",
+    "lima",
     "limit",
     "limitar",
     "linear",
@@ -787,6 +874,7 @@
     "mantiveram-se",
     "manual",
     "mao",
+    "maquina",
     "marcante",
     "march",
     "marcha",
@@ -801,6 +889,7 @@
     "materiai",
     "material",
     "matinaldispneia",
+    "mato",
     "matsutani",
     "mauricio",
     "maxima",
@@ -826,6 +915,7 @@
     "melhorar",
     "membro",
     "meno",
+    "mensagen",
     "mensuracao",
     "mensurar",
     "mental",
@@ -845,6 +935,7 @@
     "modelo",
     "moderada",
     "moderado",
+    "monitore",
     "month",
     "mor",
     "morai",
@@ -854,6 +945,7 @@
     "mostram",
     "mostrou",
     "mostrou-se",
+    "motivo",
     "motora",
     "mudado",
     "mudanca",
@@ -889,12 +981,15 @@
     "negativamentea",
     "negative",
     "negativo",
+    "negligencia",
     "neiro",
     "nenhum",
     "ninety-six",
     "nivei",
     "nivel",
+    "norma",
     "nostico",
+    "noturno",
     "numero",
     "nune",
     "obesidade",
@@ -908,6 +1003,7 @@
     "observational",
     "observou-se",
     "obtido",
+    "ocorre",
     "ocorrencia",
     "ocorreu",
     "ocupacional",
@@ -918,6 +1014,8 @@
     "onal",
     "opcoe",
     "open",
+    "operacao",
+    "operacional",
     "operador",
     "operadore",
     "oportunidade",
@@ -933,6 +1031,7 @@
     "otimizam",
     "ouro",
     "outcome",
+    "outubro",
     "overall",
     "pacidade",
     "paciente",
@@ -947,6 +1046,7 @@
     "palmar",
     "palpacao",
     "panorama",
+    "papel",
     "parametrico",
     "pareada",
     "parecem",
@@ -962,15 +1062,18 @@
     "pepsic",
     "percepcao",
     "percorrida",
+    "perda",
     "pereira",
     "pereiraabstract",
     "performance",
     "period",
     "periodico",
     "periodo",
+    "permitir",
     "pernambucana",
     "pernambuco",
     "persistencia",
+    "perspectiva",
     "perturbation",
     "pesquisa",
     "pessoa",
@@ -1012,7 +1115,10 @@
     "possibility",
     "possivei",
     "possui",
+    "pratica",
     "pre",
+    "precisam",
+    "precisao",
     "predomi",
     "preencheram",
     "preensao",
@@ -1025,9 +1131,13 @@
     "prevalence",
     "prevalencia",
     "prevalente",
+    "prevenindo",
     "previously",
+    "principal",
     "principalmente",
+    "priorizem",
     "priscila",
+    "probabilidade",
     "problema",
     "procedimento",
     "proceeding",
@@ -1072,6 +1182,7 @@
     "qualid",
     "qualidade",
     "quality",
+    "qualquer",
     "quase",
     "quasi-experimental",
     "queda",
@@ -1085,12 +1196,14 @@
     "qvar",
     "randomizado",
     "ranzolin",
+    "rapida",
     "rastrear",
     "rata",
     "ratamento",
     "razao",
     "re",
     "reabilitacao",
+    "reai",
     "realiza",
     "realizada",
     "realizadautilizando-se",
@@ -1109,6 +1222,7 @@
     "reducao",
     "reduction",
     "refere",
+    "refere-se",
     "referencia",
     "referente",
     "referiam",
@@ -1143,6 +1257,7 @@
     "result",
     "resultado",
     "resultando",
+    "resultar",
     "resultaram",
     "resumo",
     "reumatica",
@@ -1163,6 +1278,7 @@
     "rheumatology",
     "ribeiro",
     "rigidez",
+    "rigoroso",
     "risco",
     "rm",
     "rua",
@@ -1172,6 +1288,7 @@
     "salvador",
     "santo",
     "sao",
+    "satisfacao",
     "satisfatorio",
     "satisfeita",
     "saudavei",
@@ -1187,7 +1304,10 @@
     "seguida",
     "seguinte",
     "seguiu",
+    "segura",
+    "seguranca",
     "seja",
+    "sejam",
     "sele",
     "selecao",
     "selecionado",
@@ -1218,9 +1338,11 @@
     "short-form",
     "sido",
     "signifi",
+    "significa",
     "significancia",
     "significante",
     "significativa",
+    "significativo",
     "signiﬁ",
     "silva",
     "sin",
@@ -1230,6 +1352,7 @@
     "sintomatico",
     "sintomatologia",
     "sitio",
+    "situacoe",
     "sl",
     "sleep",
     "sobredose",
@@ -1254,6 +1377,7 @@
     "submetido",
     "submitted",
     "substituicao",
+    "sucesso",
     "such",
     "suelem",
     "suelembarrosyahoocombr",
@@ -1264,8 +1388,10 @@
     "sugere",
     "sugerem",
     "sulyvan",
+    "sumario",
     "superior",
     "superiore",
+    "surgimento",
     "survey",
     "susanlkyuanyahoocombr",
     "symptom",
@@ -1280,6 +1406,7 @@
     "tc",
     "tecido",
     "tecnica",
+    "tecnologia",
     "telefone",
     "tema",
     "tematica",
@@ -1287,6 +1414,7 @@
     "tendencia",
     "tender",
     "tendo",
+    "tenha",
     "tenham",
     "terapeuti",
     "terapia",
@@ -1307,7 +1435,9 @@
     "tiva",
     "todossao",
     "toleran",
+    "tomada",
     "tornar",
+    "tornou-se",
     "torrelatada",
     "total",
     "totalmente",
@@ -1330,6 +1460,7 @@
     "trial",
     "tripode",
     "trumento",
+    "turno",
     "ultimo",
     "uminstrumento",
     "understand",
@@ -1342,10 +1473,12 @@
     "unknown",
     "update",
     "urbana",
+    "usabilidade",
     "usado",
     "used",
     "using",
     "uso",
+    "usuario",
     "utilizacao",
     "utilizada",
     "utilizado",
@@ -1355,6 +1488,7 @@
     "utilizaram",
     "utilizou",
     "utilizou-se",
+    "valadare",
     "validacao",
     "validade",
     "validation",
@@ -1384,6 +1518,7 @@
     "veze",
     "viamente",
     "vice-versa",
+    "victor",
     "vida",
     "vidaa",
     "vidaprevalencia",
@@ -1412,9 +1547,7 @@
   ],
   "documentos": {
     "Adesao_tratamento_fibromialgia_desafios_impactos_resumo.txt": {
-      "DocID": "doc_01",
-      "total_termos_significativos": 176,
-      "termos_unicos": 133,
+      "DocID": "D1",
       "frequencias": [
         [
           "tratamento",
@@ -1948,12 +2081,12 @@
           "tiva",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 133,
+      "total_termos_significativos": 176
     },
     "Analise_comorbidades_associadas_fibromialgia_revisao_resumo.txt": {
-      "DocID": "doc_02",
-      "total_termos_significativos": 163,
-      "termos_unicos": 131,
+      "DocID": "D2",
       "frequencias": [
         [
           "comorbidade",
@@ -2479,12 +2612,12 @@
           "proper",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 131,
+      "total_termos_significativos": 163
     },
     "Aspectos_Psicologicos_Fibromialgia_Revisao_Integrativa_resumo.txt": {
-      "DocID": "doc_03",
-      "total_termos_significativos": 178,
-      "termos_unicos": 137,
+      "DocID": "D3",
       "frequencias": [
         [
           "were",
@@ -3034,12 +3167,579 @@
           "prevalence",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 137,
+      "total_termos_significativos": 178
+    },
+    "atividade_fisica_melhora_qualidade_vida_resumo.txt": {
+      "DocID": "D4",
+      "frequencias": [
+        [
+          "exercicio",
+          5
+        ],
+        [
+          "fibromialgia",
+          4
+        ],
+        [
+          "atividade",
+          4
+        ],
+        [
+          "qualidade",
+          4
+        ],
+        [
+          "vida",
+          4
+        ],
+        [
+          "paciente",
+          3
+        ],
+        [
+          "fisico",
+          3
+        ],
+        [
+          "sindrome",
+          2
+        ],
+        [
+          "dor",
+          2
+        ],
+        [
+          "difusa",
+          2
+        ],
+        [
+          "fisica",
+          2
+        ],
+        [
+          "melhora",
+          2
+        ],
+        [
+          "literatura",
+          2
+        ],
+        [
+          "motora",
+          2
+        ],
+        [
+          "portadore",
+          2
+        ],
+        [
+          "fibromyalgia",
+          2
+        ],
+        [
+          "carvalho",
+          2
+        ],
+        [
+          "kelly",
+          2
+        ],
+        [
+          "cristina",
+          2
+        ],
+        [
+          "pereira",
+          2
+        ],
+        [
+          "sena",
+          2
+        ],
+        [
+          "aire",
+          2
+        ],
+        [
+          "valparaiso",
+          2
+        ],
+        [
+          "goia",
+          2
+        ],
+        [
+          "pain",
+          2
+        ],
+        [
+          "introducao",
+          1
+        ],
+        [
+          "reumatica",
+          1
+        ],
+        [
+          "etiolo",
+          1
+        ],
+        [
+          "gia",
+          1
+        ],
+        [
+          "desconhecida",
+          1
+        ],
+        [
+          "caracterizada",
+          1
+        ],
+        [
+          "musculoesqueletica",
+          1
+        ],
+        [
+          "cronica",
+          1
+        ],
+        [
+          "definida",
+          1
+        ],
+        [
+          "meno",
+          1
+        ],
+        [
+          "tre",
+          1
+        ],
+        [
+          "mese",
+          1
+        ],
+        [
+          "alem",
+          1
+        ],
+        [
+          "presenca",
+          1
+        ],
+        [
+          "sensibilidade",
+          1
+        ],
+        [
+          "mai",
+          1
+        ],
+        [
+          "doloroso",
+          1
+        ],
+        [
+          "denominado",
+          1
+        ],
+        [
+          "tender",
+          1
+        ],
+        [
+          "point",
+          1
+        ],
+        [
+          "objetivoanalisar",
+          1
+        ],
+        [
+          "contribuir",
+          1
+        ],
+        [
+          "fibromialgico",
+          1
+        ],
+        [
+          "metodo",
+          1
+        ],
+        [
+          "elaboracao",
+          1
+        ],
+        [
+          "pesquisa",
+          1
+        ],
+        [
+          "utilizou-se",
+          1
+        ],
+        [
+          "revi",
+          1
+        ],
+        [
+          "sao",
+          1
+        ],
+        [
+          "base",
+          1
+        ],
+        [
+          "dado",
+          1
+        ],
+        [
+          "lilac",
+          1
+        ],
+        [
+          "scielo",
+          1
+        ],
+        [
+          "utilizada",
+          1
+        ],
+        [
+          "publicacoe",
+          1
+        ],
+        [
+          "idioma",
+          1
+        ],
+        [
+          "portugue",
+          1
+        ],
+        [
+          "ingle",
+          1
+        ],
+        [
+          "guinte",
+          1
+        ],
+        [
+          "palavras-chave",
+          1
+        ],
+        [
+          "fibromialgiaatividade",
+          1
+        ],
+        [
+          "resultado",
+          1
+        ],
+        [
+          "apresenta",
+          1
+        ],
+        [
+          "referencia",
+          1
+        ],
+        [
+          "apontam",
+          1
+        ],
+        [
+          "efeito",
+          1
+        ],
+        [
+          "beneficio",
+          1
+        ],
+        [
+          "tratamento",
+          1
+        ],
+        [
+          "nao",
+          1
+        ],
+        [
+          "medicamentoso",
+          1
+        ],
+        [
+          "incluem",
+          1
+        ],
+        [
+          "aerobica",
+          1
+        ],
+        [
+          "alongamento",
+          1
+        ],
+        [
+          "treinamento",
+          1
+        ],
+        [
+          "forca",
+          1
+        ],
+        [
+          "conclusao",
+          1
+        ],
+        [
+          "portador",
+          1
+        ],
+        [
+          "fibro",
+          1
+        ],
+        [
+          "mialgia",
+          1
+        ],
+        [
+          "oportunidade",
+          1
+        ],
+        [
+          "controlar",
+          1
+        ],
+        [
+          "sintoma",
+          1
+        ],
+        [
+          "melhorando",
+          1
+        ],
+        [
+          "palavraschave",
+          1
+        ],
+        [
+          "qua",
+          1
+        ],
+        [
+          "lidade",
+          1
+        ],
+        [
+          "vidaa",
+          1
+        ],
+        [
+          "physical",
+          1
+        ],
+        [
+          "activity",
+          1
+        ],
+        [
+          "improvement",
+          1
+        ],
+        [
+          "life",
+          1
+        ],
+        [
+          "quality",
+          1
+        ],
+        [
+          "patient",
+          1
+        ],
+        [
+          "priscila",
+          1
+        ],
+        [
+          "miranda",
+          1
+        ],
+        [
+          "curso",
+          1
+        ],
+        [
+          "farmacia",
+          1
+        ],
+        [
+          "faculdade",
+          1
+        ],
+        [
+          "ciencia",
+          1
+        ],
+        [
+          "educacao",
+          1
+        ],
+        [
+          "correspondencia",
+          1
+        ],
+        [
+          "professora",
+          1
+        ],
+        [
+          "rua",
+          1
+        ],
+        [
+          "acre",
+          1
+        ],
+        [
+          "quadra",
+          1
+        ],
+        [
+          "lote",
+          1
+        ],
+        [
+          "setor",
+          1
+        ],
+        [
+          "chacara",
+          1
+        ],
+        [
+          "anhanguera",
+          1
+        ],
+        [
+          "telefone",
+          1
+        ],
+        [
+          "email",
+          1
+        ],
+        [
+          "kellycristinasenaairescombr",
+          1
+        ],
+        [
+          "recebido",
+          1
+        ],
+        [
+          "aceito",
+          1
+        ],
+        [
+          "revista",
+          1
+        ],
+        [
+          "divulgacao",
+          1
+        ],
+        [
+          "cientifica",
+          1
+        ],
+        [
+          "janeiro-junho",
+          1
+        ],
+        [
+          "pereiraabstract",
+          1
+        ],
+        [
+          "introduction",
+          1
+        ],
+        [
+          "syndrome",
+          1
+        ],
+        [
+          "unknown",
+          1
+        ],
+        [
+          "eti",
+          1
+        ],
+        [
+          "ology",
+          1
+        ],
+        [
+          "characterized",
+          1
+        ],
+        [
+          "widespread",
+          1
+        ],
+        [
+          "chronic",
+          1
+        ],
+        [
+          "musculoskeletal",
+          1
+        ],
+        [
+          "defined",
+          1
+        ],
+        [
+          "diffuse",
+          1
+        ],
+        [
+          "least",
+          1
+        ],
+        [
+          "three",
+          1
+        ],
+        [
+          "month",
+          1
+        ],
+        [
+          "presence",
+          1
+        ],
+        [
+          "sensitivity",
+          1
+        ]
+      ],
+      "termos_unicos": 140,
+      "total_termos_significativos": 178
     },
     "Avaliacao_agenciamento_autocuidados_resumo.txt": {
-      "DocID": "doc_04",
-      "total_termos_significativos": 164,
-      "termos_unicos": 106,
+      "DocID": "D5",
       "frequencias": [
         [
           "autocuidado",
@@ -3465,12 +4165,12 @@
           "individual",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 106,
+      "total_termos_significativos": 164
     },
     "Avaliacao_dor_qualidade_vida_pacientes_resumo.txt": {
-      "DocID": "doc_05",
-      "total_termos_significativos": 189,
-      "termos_unicos": 152,
+      "DocID": "D6",
       "frequencias": [
         [
           "pe",
@@ -4080,12 +4780,12 @@
           "questio-nario",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 152,
+      "total_termos_significativos": 189
     },
     "Avaliacao_instrumentos_medida_resumo.txt": {
-      "DocID": "doc_06",
-      "total_termos_significativos": 170,
-      "termos_unicos": 119,
+      "DocID": "D7",
       "frequencias": [
         [
           "ev",
@@ -4563,12 +5263,12 @@
           "imagem",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 119,
+      "total_termos_significativos": 170
     },
     "Avaliacao_qualidade_vida_forca_muscular_resumo.txt": {
-      "DocID": "doc_07",
-      "total_termos_significativos": 163,
-      "termos_unicos": 113,
+      "DocID": "D8",
       "frequencias": [
         [
           "forca",
@@ -5022,12 +5722,12 @@
           "aproximadamente",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 113,
+      "total_termos_significativos": 163
     },
     "Avaliação_capacidade _funcional_mulheres_resumo.txt": {
-      "DocID": "doc_08",
-      "total_termos_significativos": 172,
-      "termos_unicos": 118,
+      "DocID": "D9",
       "frequencias": [
         [
           "dor",
@@ -5501,12 +6201,12 @@
           "evaluate",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 118,
+      "total_termos_significativos": 172
     },
     "Depressao_Qualidade_via_pacientes_Fibromialgia_resumo.txt": {
-      "DocID": "doc_09",
-      "total_termos_significativos": 161,
-      "termos_unicos": 113,
+      "DocID": "D10",
       "frequencias": [
         [
           "qualidade",
@@ -5960,12 +6660,12 @@
           "palavras-chave",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 113,
+      "total_termos_significativos": 161
     },
     "Efeitos_acupuntura_fibromialgia_revisao_integrativa_resumo.txt": {
-      "DocID": "doc_10",
-      "total_termos_significativos": 182,
-      "termos_unicos": 133,
+      "DocID": "D11",
       "frequencias": [
         [
           "fibromialgia",
@@ -6499,12 +7199,12 @@
           "conflito",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 133,
+      "total_termos_significativos": 182
     },
     "Efeitos_cinesioterapia_ativa_resistida_tratamento_resumo.txt": {
-      "DocID": "doc_11",
-      "total_termos_significativos": 189,
-      "termos_unicos": 137,
+      "DocID": "D12",
       "frequencias": [
         [
           "therapy",
@@ -7054,12 +7754,12 @@
           "capacitie",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 137,
+      "total_termos_significativos": 189
     },
     "Efeitos_terapia_manual_dor_mulheres_resumo.txt": {
-      "DocID": "doc_12",
-      "total_termos_significativos": 176,
-      "termos_unicos": 127,
+      "DocID": "D13",
       "frequencias": [
         [
           "manual",
@@ -7569,12 +8269,12 @@
           "aimed",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 127,
+      "total_termos_significativos": 176
     },
     "Fatores_relacionados_qualidade_vida_autorrelatada_resumo.txt": {
-      "DocID": "doc_13",
-      "total_termos_significativos": 184,
-      "termos_unicos": 124,
+      "DocID": "D14",
       "frequencias": [
         [
           "qvar",
@@ -8072,1992 +8772,12 @@
           "walsh",
           1
         ]
-      ]
-    },
-    "Prevalencia_Depressao_Relacao_Qualidade_Vida_resumo.txt": {
-      "DocID": "doc_14",
-      "total_termos_significativos": 177,
-      "termos_unicos": 123,
-      "frequencias": [
-        [
-          "depressao",
-          10
-        ],
-        [
-          "qualidade",
-          8
-        ],
-        [
-          "paciente",
-          7
-        ],
-        [
-          "vida",
-          6
-        ],
-        [
-          "sf",
-          5
-        ],
-        [
-          "percepcao",
-          4
-        ],
-        [
-          "saude",
-          4
-        ],
-        [
-          "fibromialgia",
-          3
-        ],
-        [
-          "escala",
-          3
-        ],
-        [
-          "mostrou-se",
-          3
-        ],
-        [
-          "prevalencia",
-          2
-        ],
-        [
-          "sindrome",
-          2
-        ],
-        [
-          "health",
-          2
-        ],
-        [
-          "ghq",
-          2
-        ],
-        [
-          "escore",
-          2
-        ],
-        [
-          "responsavelpela",
-          2
-        ],
-        [
-          "dor",
-          2
-        ],
-        [
-          "funcionalidade",
-          2
-        ],
-        [
-          "social",
-          2
-        ],
-        [
-          "sensacao",
-          2
-        ],
-        [
-          "berber",
-          2
-        ],
-        [
-          "objetivo",
-          1
-        ],
-        [
-          "estimar",
-          1
-        ],
-        [
-          "condicao",
-          1
-        ],
-        [
-          "avaliar",
-          1
-        ],
-        [
-          "magnitude",
-          1
-        ],
-        [
-          "associacao",
-          1
-        ],
-        [
-          "adepressao",
-          1
-        ],
-        [
-          "metodo",
-          1
-        ],
-        [
-          "selecionado",
-          1
-        ],
-        [
-          "compareceram",
-          1
-        ],
-        [
-          "consulta",
-          1
-        ],
-        [
-          "medica",
-          1
-        ],
-        [
-          "duasinstituicoe",
-          1
-        ],
-        [
-          "publica",
-          1
-        ],
-        [
-          "consultorio",
-          1
-        ],
-        [
-          "particulare",
-          1
-        ],
-        [
-          "reumatologia",
-          1
-        ],
-        [
-          "aplicado",
-          1
-        ],
-        [
-          "doi",
-          1
-        ],
-        [
-          "questionario",
-          1
-        ],
-        [
-          "general",
-          1
-        ],
-        [
-          "questionaire",
-          1
-        ],
-        [
-          "rastrear",
-          1
-        ],
-        [
-          "medical",
-          1
-        ],
-        [
-          "outcome",
-          1
-        ],
-        [
-          "short",
-          1
-        ],
-        [
-          "form",
-          1
-        ],
-        [
-          "survey",
-          1
-        ],
-        [
-          "medir",
-          1
-        ],
-        [
-          "composto",
-          1
-        ],
-        [
-          "abordam",
-          1
-        ],
-        [
-          "vario",
-          1
-        ],
-        [
-          "aspecto",
-          1
-        ],
-        [
-          "daqualidade",
-          1
-        ],
-        [
-          "realizaram-se",
-          1
-        ],
-        [
-          "analise",
-          1
-        ],
-        [
-          "uni",
-          1
-        ],
-        [
-          "multivariada",
-          1
-        ],
-        [
-          "entreo",
-          1
-        ],
-        [
-          "obtido",
-          1
-        ],
-        [
-          "resultado",
-          1
-        ],
-        [
-          "concluiu-se",
-          1
-        ],
-        [
-          "leve",
-          1
-        ],
-        [
-          "moderada",
-          1
-        ],
-        [
-          "severa",
-          1
-        ],
-        [
-          "queda",
-          1
-        ],
-        [
-          "estatisticamente",
-          1
-        ],
-        [
-          "significativa",
-          1
-        ],
-        [
-          "devida",
-          1
-        ],
-        [
-          "seguinte",
-          1
-        ],
-        [
-          "condicionamento",
-          1
-        ],
-        [
-          "fisico",
-          1
-        ],
-        [
-          "funcionalidadefisica",
-          1
-        ],
-        [
-          "mental",
-          1
-        ],
-        [
-          "funcio-nalidade",
-          1
-        ],
-        [
-          "emocional",
-          1
-        ],
-        [
-          "conclusoe",
-          1
-        ],
-        [
-          "influenciar",
-          1
-        ],
-        [
-          "negativamente",
-          1
-        ],
-        [
-          "aumentar",
-          1
-        ],
-        [
-          "incapacidade",
-          1
-        ],
-        [
-          "tornar",
-          1
-        ],
-        [
-          "aadesao",
-          1
-        ],
-        [
-          "tratamento",
-          1
-        ],
-        [
-          "mai",
-          1
-        ],
-        [
-          "dificil",
-          1
-        ],
-        [
-          "diminuir",
-          1
-        ],
-        [
-          "relacoessociai",
-          1
-        ],
-        [
-          "apresenta",
-          1
-        ],
-        [
-          "tendencia",
-          1
-        ],
-        [
-          "isolamento",
-          1
-        ],
-        [
-          "sentimentosde",
-          1
-        ],
-        [
-          "derrota",
-          1
-        ],
-        [
-          "frustracao",
-          1
-        ],
-        [
-          "aumento",
-          1
-        ],
-        [
-          "idade",
-          1
-        ],
-        [
-          "melhora",
-          1
-        ],
-        [
-          "dolorosa",
-          1
-        ],
-        [
-          "vitalidade",
-          1
-        ],
-        [
-          "tempo",
-          1
-        ],
-        [
-          "diag",
-          1
-        ],
-        [
-          "nostico",
-          1
-        ],
-        [
-          "associado",
-          1
-        ],
-        [
-          "melhor",
-          1
-        ],
-        [
-          "palavras-chave",
-          1
-        ],
-        [
-          "vidaprevalencia",
-          1
-        ],
-        [
-          "relacao",
-          1
-        ],
-        [
-          "prevalence",
-          1
-        ],
-        [
-          "depression",
-          1
-        ],
-        [
-          "relationship",
-          1
-        ],
-        [
-          "quality",
-          1
-        ],
-        [
-          "life",
-          1
-        ],
-        [
-          "patient",
-          1
-        ],
-        [
-          "fibromyalgia",
-          1
-        ],
-        [
-          "syndrome",
-          1
-        ],
-        [
-          "joana",
-          1
-        ],
-        [
-          "souza",
-          1
-        ],
-        [
-          "santo",
-          1
-        ],
-        [
-          "emil",
-          1
-        ],
-        [
-          "kupek",
-          1
-        ],
-        [
-          "saulo",
-          1
-        ],
-        [
-          "caire",
-          1
-        ]
-      ]
-    },
-    "Prevalencia_Fibromialgia_Revisao_Literatura_resumo.txt": {
-      "DocID": "doc_15",
-      "total_termos_significativos": 160,
-      "termos_unicos": 106,
-      "frequencias": [
-        [
-          "prevalencia",
-          15
-        ],
-        [
-          "fm",
-          6
-        ],
-        [
-          "populacao",
-          6
-        ],
-        [
-          "fibromialgia",
-          5
-        ],
-        [
-          "literatura",
-          3
-        ],
-        [
-          "crianca",
-          3
-        ],
-        [
-          "dor",
-          3
-        ],
-        [
-          "cronica",
-          3
-        ],
-        [
-          "difusa",
-          3
-        ],
-        [
-          "estudo",
-          3
-        ],
-        [
-          "objetivo",
-          2
-        ],
-        [
-          "revisao",
-          2
-        ],
-        [
-          "criterio",
-          2
-        ],
-        [
-          "acr",
-          2
-        ],
-        [
-          "realizado",
-          2
-        ],
-        [
-          "fibromyalgia",
-          2
-        ],
-        [
-          "prevalence",
-          2
-        ],
-        [
-          "artigo",
-          2
-        ],
-        [
-          "populacoe",
-          2
-        ],
-        [
-          "adulta",
-          2
-        ],
-        [
-          "mulhere",
-          2
-        ],
-        [
-          "adolescente",
-          2
-        ],
-        [
-          "valore",
-          2
-        ],
-        [
-          "mai",
-          2
-        ],
-        [
-          "introducao",
-          1
-        ],
-        [
-          "realizar",
-          1
-        ],
-        [
-          "proposto",
-          1
-        ],
-        [
-          "american",
-          1
-        ],
-        [
-          "college",
-          1
-        ],
-        [
-          "rheumatology",
-          1
-        ],
-        [
-          "metodo",
-          1
-        ],
-        [
-          "levan",
-          1
-        ],
-        [
-          "tamento",
-          1
-        ],
-        [
-          "bibliografico",
-          1
-        ],
-        [
-          "periodo",
-          1
-        ],
-        [
-          "base",
-          1
-        ],
-        [
-          "dado",
-          1
-        ],
-        [
-          "medline",
-          1
-        ],
-        [
-          "lilac",
-          1
-        ],
-        [
-          "embase",
-          1
-        ],
-        [
-          "isi",
-          1
-        ],
-        [
-          "utilizada",
-          1
-        ],
-        [
-          "pala",
-          1
-        ],
-        [
-          "vras-chave",
-          1
-        ],
-        [
-          "correspondente",
-          1
-        ],
-        [
-          "ingle",
-          1
-        ],
-        [
-          "selecionado",
-          1
-        ],
-        [
-          "apo",
-          1
-        ],
-        [
-          "leitura",
-          1
-        ],
-        [
-          "resumo",
-          1
-        ],
-        [
-          "excluido",
-          1
-        ],
-        [
-          "referiam",
-          1
-        ],
-        [
-          "doenca",
-          1
-        ],
-        [
-          "somente",
-          1
-        ],
-        [
-          "abordavam",
-          1
-        ],
-        [
-          "tema",
-          1
-        ],
-        [
-          "sele",
-          1
-        ],
-        [
-          "cionado",
-          1
-        ],
-        [
-          "agrupado",
-          1
-        ],
-        [
-          "categoria",
-          1
-        ],
-        [
-          "especifica",
-          1
-        ],
-        [
-          "resultado",
-          1
-        ],
-        [
-          "aponta",
-          1
-        ],
-        [
-          "sendo",
-          1
-        ],
-        [
-          "prevalente",
-          1
-        ],
-        [
-          "homen",
-          1
-        ],
-        [
-          "especialmente",
-          1
-        ],
-        [
-          "faixa",
-          1
-        ],
-        [
-          "etaria",
-          1
-        ],
-        [
-          "especiai",
-          1
-        ],
-        [
-          "sao",
-          1
-        ],
-        [
-          "escasso",
-          1
-        ],
-        [
-          "conclusivo",
-          1
-        ],
-        [
-          "tambem",
-          1
-        ],
-        [
-          "conclusao",
-          1
-        ],
-        [
-          "devem",
-          1
-        ],
-        [
-          "estimulado",
-          1
-        ],
-        [
-          "joven",
-          1
-        ],
-        [
-          "palavras-chave",
-          1
-        ],
-        [
-          "populacaoa",
-          1
-        ],
-        [
-          "literature",
-          1
-        ],
-        [
-          "review",
-          1
-        ],
-        [
-          "alane",
-          1
-        ],
-        [
-          "cavalcante",
-          1
-        ],
-        [
-          "juliana",
-          1
-        ],
-        [
-          "sauer",
-          1
-        ],
-        [
-          "suellen",
-          1
-        ],
-        [
-          "chalot",
-          1
-        ],
-        [
-          "ana",
-          1
-        ],
-        [
-          "assumpcao",
-          1
-        ],
-        [
-          "lai",
-          1
-        ],
-        [
-          "lage",
-          1
-        ],
-        [
-          "luciana",
-          1
-        ],
-        [
-          "akemi",
-          1
-        ],
-        [
-          "matsutani",
-          1
-        ],
-        [
-          "amelia",
-          1
-        ],
-        [
-          "pasqual",
-          1
-        ],
-        [
-          "marque",
-          1
-        ],
-        [
-          "departamento",
-          1
-        ],
-        [
-          "fisioterapia",
-          1
-        ],
-        [
-          "fonoaudiologia",
-          1
-        ],
-        [
-          "terapia",
-          1
-        ],
-        [
-          "ocupacional",
-          1
-        ],
-        [
-          "faculdade",
-          1
-        ],
-        [
-          "medicina",
-          1
-        ],
-        [
-          "universidade",
-          1
-        ]
-      ]
-    },
-    "Validacao_Versao_Brasileira_Fibromyalgia_Impact_resumo.txt": {
-      "DocID": "doc_16",
-      "total_termos_significativos": 176,
-      "termos_unicos": 119,
-      "frequencias": [
-        [
-          "versao",
-          11
-        ],
-        [
-          "doi",
-          6
-        ],
-        [
-          "paciente",
-          5
-        ],
-        [
-          "professore",
-          4
-        ],
-        [
-          "avaliacao",
-          4
-        ],
-        [
-          "questoe",
-          4
-        ],
-        [
-          "fibromyalgia",
-          3
-        ],
-        [
-          "impact",
-          3
-        ],
-        [
-          "questionnaire",
-          3
-        ],
-        [
-          "fiq",
-          3
-        ],
-        [
-          "fm",
-          3
-        ],
-        [
-          "ingle",
-          3
-        ],
-        [
-          "teste",
-          3
-        ],
-        [
-          "nao-aplicavel",
-          3
-        ],
-        [
-          "brasileira",
-          2
-        ],
-        [
-          "fibromialgia",
-          2
-        ],
-        [
-          "lingua",
-          2
-        ],
-        [
-          "inglesa",
-          2
-        ],
-        [
-          "reumatologista",
-          2
-        ],
-        [
-          "fisioterapeuta",
-          2
-        ],
-        [
-          "mai",
-          2
-        ],
-        [
-          "resposta",
-          2
-        ],
-        [
-          "mesmo",
-          2
-        ],
-        [
-          "aplicacao",
-          2
-        ],
-        [
-          "nao",
-          2
-        ],
-        [
-          "houve",
-          2
-        ],
-        [
-          "carinha",
-          2
-        ],
-        [
-          "objetivo",
-          1
-        ],
-        [
-          "desenvolver",
-          1
-        ],
-        [
-          "transcultural",
-          1
-        ],
-        [
-          "populacao",
-          1
-        ],
-        [
-          "analisar",
-          1
-        ],
-        [
-          "validade",
-          1
-        ],
-        [
-          "eficacia",
-          1
-        ],
-        [
-          "aplicado",
-          1
-        ],
-        [
-          "metodo",
-          1
-        ],
-        [
-          "participaram",
-          1
-        ],
-        [
-          "estudo",
-          1
-        ],
-        [
-          "diagnosticado",
-          1
-        ],
-        [
-          "criterio",
-          1
-        ],
-        [
-          "american",
-          1
-        ],
-        [
-          "college",
-          1
-        ],
-        [
-          "rheumatology",
-          1
-        ],
-        [
-          "acr",
-          1
-        ],
-        [
-          "baseado",
-          1
-        ],
-        [
-          "orientacoe",
-          1
-        ],
-        [
-          "guillemin",
-          1
-        ],
-        [
-          "et",
-          1
-        ],
-        [
-          "al",
-          1
-        ],
-        [
-          "convidado",
-          1
-        ],
-        [
-          "procedimento",
-          1
-        ],
-        [
-          "seguiu",
-          1
-        ],
-        [
-          "etapa",
-          1
-        ],
-        [
-          "traducao",
-          1
-        ],
-        [
-          "inicial",
-          1
-        ],
-        [
-          "dua",
-          1
-        ],
-        [
-          "traducoe",
-          1
-        ],
-        [
-          "unica",
-          1
-        ],
-        [
-          "nativo",
-          1
-        ],
-        [
-          "reuniao",
-          1
-        ],
-        [
-          "consenso",
-          1
-        ],
-        [
-          "equivalencia",
-          1
-        ],
-        [
-          "cultural",
-          1
-        ],
-        [
-          "confiabilidade",
-          1
-        ],
-        [
-          "reproduti",
-          1
-        ],
-        [
-          "bilidade",
-          1
-        ],
-        [
-          "aplicada",
-          1
-        ],
-        [
-          "tendo",
-          1
-        ],
-        [
-          "item",
-          1
-        ],
-        [
-          "substituicao",
-          1
-        ],
-        [
-          "possivei",
-          1
-        ],
-        [
-          "conceito",
-          1
-        ],
-        [
-          "resultando",
-          1
-        ],
-        [
-          "avaliadore",
-          1
-        ],
-        [
-          "fizeram",
-          1
-        ],
-        [
-          "entrevista",
-          1
-        ],
-        [
-          "intervalo",
-          1
-        ],
-        [
-          "apo",
-          1
-        ],
-        [
-          "periodo",
-          1
-        ],
-        [
-          "questionario",
-          1
-        ],
-        [
-          "reaplicado",
-          1
-        ],
-        [
-          "avaliador",
-          1
-        ],
-        [
-          "resultado",
-          1
-        ],
-        [
-          "sendo",
-          1
-        ],
-        [
-          "mudado",
-          1
-        ],
-        [
-          "texto",
-          1
-        ],
-        [
-          "porem",
-          1
-        ],
-        [
-          "dificuldade",
-          1
-        ],
-        [
-          "compreensao",
-          1
-        ],
-        [
-          "escala",
-          1
-        ],
-        [
-          "visuai",
-          1
-        ],
-        [
-          "analogica",
-          1
-        ],
-        [
-          "acrescida",
-          1
-        ],
-        [
-          "extremo",
-          1
-        ],
-        [
-          "esquerda",
-          1
-        ],
-        [
-          "feliz",
-          1
-        ],
-        [
-          "direita",
-          1
-        ],
-        [
-          "infeliz",
-          1
-        ],
-        [
-          "processo",
-          1
-        ],
-        [
-          "deu",
-          1
-        ],
-        [
-          "validacao",
-          1
-        ],
-        [
-          "validation",
-          1
-        ],
-        [
-          "brazilian",
-          1
-        ],
-        [
-          "version",
-          1
-        ],
-        [
-          "amelia",
-          1
-        ],
-        [
-          "pasqual",
-          1
-        ],
-        [
-          "marque",
-          1
-        ],
-        [
-          "adriana",
-          1
-        ],
-        [
-          "barsante",
-          1
-        ],
-        [
-          "santo",
-          1
-        ],
-        [
-          "ana",
-          1
-        ],
-        [
-          "assumpcao",
-          1
-        ],
-        [
-          "luciana",
-          1
-        ],
-        [
-          "akemi",
-          1
-        ],
-        [
-          "matsutani",
-          1
-        ],
-        [
-          "lai",
-          1
-        ],
-        [
-          "lage",
-          1
-        ],
-        [
-          "carlo",
-          1
-        ],
-        [
-          "alberto",
-          1
-        ]
-      ]
-    },
-    "atividade_fisica_melhora_qualidade_vida_resumo.txt": {
-      "DocID": "doc_17",
-      "total_termos_significativos": 178,
-      "termos_unicos": 140,
-      "frequencias": [
-        [
-          "exercicio",
-          5
-        ],
-        [
-          "fibromialgia",
-          4
-        ],
-        [
-          "atividade",
-          4
-        ],
-        [
-          "qualidade",
-          4
-        ],
-        [
-          "vida",
-          4
-        ],
-        [
-          "paciente",
-          3
-        ],
-        [
-          "fisico",
-          3
-        ],
-        [
-          "sindrome",
-          2
-        ],
-        [
-          "dor",
-          2
-        ],
-        [
-          "difusa",
-          2
-        ],
-        [
-          "fisica",
-          2
-        ],
-        [
-          "melhora",
-          2
-        ],
-        [
-          "literatura",
-          2
-        ],
-        [
-          "motora",
-          2
-        ],
-        [
-          "portadore",
-          2
-        ],
-        [
-          "fibromyalgia",
-          2
-        ],
-        [
-          "carvalho",
-          2
-        ],
-        [
-          "kelly",
-          2
-        ],
-        [
-          "cristina",
-          2
-        ],
-        [
-          "pereira",
-          2
-        ],
-        [
-          "sena",
-          2
-        ],
-        [
-          "aire",
-          2
-        ],
-        [
-          "valparaiso",
-          2
-        ],
-        [
-          "goia",
-          2
-        ],
-        [
-          "pain",
-          2
-        ],
-        [
-          "introducao",
-          1
-        ],
-        [
-          "reumatica",
-          1
-        ],
-        [
-          "etiolo",
-          1
-        ],
-        [
-          "gia",
-          1
-        ],
-        [
-          "desconhecida",
-          1
-        ],
-        [
-          "caracterizada",
-          1
-        ],
-        [
-          "musculoesqueletica",
-          1
-        ],
-        [
-          "cronica",
-          1
-        ],
-        [
-          "definida",
-          1
-        ],
-        [
-          "meno",
-          1
-        ],
-        [
-          "tre",
-          1
-        ],
-        [
-          "mese",
-          1
-        ],
-        [
-          "alem",
-          1
-        ],
-        [
-          "presenca",
-          1
-        ],
-        [
-          "sensibilidade",
-          1
-        ],
-        [
-          "mai",
-          1
-        ],
-        [
-          "doloroso",
-          1
-        ],
-        [
-          "denominado",
-          1
-        ],
-        [
-          "tender",
-          1
-        ],
-        [
-          "point",
-          1
-        ],
-        [
-          "objetivoanalisar",
-          1
-        ],
-        [
-          "contribuir",
-          1
-        ],
-        [
-          "fibromialgico",
-          1
-        ],
-        [
-          "metodo",
-          1
-        ],
-        [
-          "elaboracao",
-          1
-        ],
-        [
-          "pesquisa",
-          1
-        ],
-        [
-          "utilizou-se",
-          1
-        ],
-        [
-          "revi",
-          1
-        ],
-        [
-          "sao",
-          1
-        ],
-        [
-          "base",
-          1
-        ],
-        [
-          "dado",
-          1
-        ],
-        [
-          "lilac",
-          1
-        ],
-        [
-          "scielo",
-          1
-        ],
-        [
-          "utilizada",
-          1
-        ],
-        [
-          "publicacoe",
-          1
-        ],
-        [
-          "idioma",
-          1
-        ],
-        [
-          "portugue",
-          1
-        ],
-        [
-          "ingle",
-          1
-        ],
-        [
-          "guinte",
-          1
-        ],
-        [
-          "palavras-chave",
-          1
-        ],
-        [
-          "fibromialgiaatividade",
-          1
-        ],
-        [
-          "resultado",
-          1
-        ],
-        [
-          "apresenta",
-          1
-        ],
-        [
-          "referencia",
-          1
-        ],
-        [
-          "apontam",
-          1
-        ],
-        [
-          "efeito",
-          1
-        ],
-        [
-          "beneficio",
-          1
-        ],
-        [
-          "tratamento",
-          1
-        ],
-        [
-          "nao",
-          1
-        ],
-        [
-          "medicamentoso",
-          1
-        ],
-        [
-          "incluem",
-          1
-        ],
-        [
-          "aerobica",
-          1
-        ],
-        [
-          "alongamento",
-          1
-        ],
-        [
-          "treinamento",
-          1
-        ],
-        [
-          "forca",
-          1
-        ],
-        [
-          "conclusao",
-          1
-        ],
-        [
-          "portador",
-          1
-        ],
-        [
-          "fibro",
-          1
-        ],
-        [
-          "mialgia",
-          1
-        ],
-        [
-          "oportunidade",
-          1
-        ],
-        [
-          "controlar",
-          1
-        ],
-        [
-          "sintoma",
-          1
-        ],
-        [
-          "melhorando",
-          1
-        ],
-        [
-          "palavraschave",
-          1
-        ],
-        [
-          "qua",
-          1
-        ],
-        [
-          "lidade",
-          1
-        ],
-        [
-          "vidaa",
-          1
-        ],
-        [
-          "physical",
-          1
-        ],
-        [
-          "activity",
-          1
-        ],
-        [
-          "improvement",
-          1
-        ],
-        [
-          "life",
-          1
-        ],
-        [
-          "quality",
-          1
-        ],
-        [
-          "patient",
-          1
-        ],
-        [
-          "priscila",
-          1
-        ],
-        [
-          "miranda",
-          1
-        ],
-        [
-          "curso",
-          1
-        ],
-        [
-          "farmacia",
-          1
-        ],
-        [
-          "faculdade",
-          1
-        ],
-        [
-          "ciencia",
-          1
-        ],
-        [
-          "educacao",
-          1
-        ],
-        [
-          "correspondencia",
-          1
-        ],
-        [
-          "professora",
-          1
-        ],
-        [
-          "rua",
-          1
-        ],
-        [
-          "acre",
-          1
-        ],
-        [
-          "quadra",
-          1
-        ],
-        [
-          "lote",
-          1
-        ],
-        [
-          "setor",
-          1
-        ],
-        [
-          "chacara",
-          1
-        ],
-        [
-          "anhanguera",
-          1
-        ],
-        [
-          "telefone",
-          1
-        ],
-        [
-          "email",
-          1
-        ],
-        [
-          "kellycristinasenaairescombr",
-          1
-        ],
-        [
-          "recebido",
-          1
-        ],
-        [
-          "aceito",
-          1
-        ],
-        [
-          "revista",
-          1
-        ],
-        [
-          "divulgacao",
-          1
-        ],
-        [
-          "cientifica",
-          1
-        ],
-        [
-          "janeiro-junho",
-          1
-        ],
-        [
-          "pereiraabstract",
-          1
-        ],
-        [
-          "introduction",
-          1
-        ],
-        [
-          "syndrome",
-          1
-        ],
-        [
-          "unknown",
-          1
-        ],
-        [
-          "eti",
-          1
-        ],
-        [
-          "ology",
-          1
-        ],
-        [
-          "characterized",
-          1
-        ],
-        [
-          "widespread",
-          1
-        ],
-        [
-          "chronic",
-          1
-        ],
-        [
-          "musculoskeletal",
-          1
-        ],
-        [
-          "defined",
-          1
-        ],
-        [
-          "diffuse",
-          1
-        ],
-        [
-          "least",
-          1
-        ],
-        [
-          "three",
-          1
-        ],
-        [
-          "month",
-          1
-        ],
-        [
-          "presence",
-          1
-        ],
-        [
-          "sensitivity",
-          1
-        ]
-      ]
+      ],
+      "termos_unicos": 124,
+      "total_termos_significativos": 184
     },
     "fisioterapia_aquatica_tratamento_reabilitacao_pacientes_resumo.txt": {
-      "DocID": "doc_18",
-      "total_termos_significativos": 169,
-      "termos_unicos": 132,
+      "DocID": "D15",
       "frequencias": [
         [
           "fisioterapia",
@@ -10587,12 +9307,12 @@
           "dissertation",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 132,
+      "total_termos_significativos": 169
     },
     "hidrocinesioterapia_influencia_qualidade_vida_pacientes_resumo.txt": {
-      "DocID": "doc_19",
-      "total_termos_significativos": 173,
-      "termos_unicos": 129,
+      "DocID": "D16",
       "frequencias": [
         [
           "fibromialgia",
@@ -11110,12 +9830,511 @@
           "pain",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 129,
+      "total_termos_significativos": 173
+    },
+    "Prevalencia_Depressao_Relacao_Qualidade_Vida_resumo.txt": {
+      "DocID": "D17",
+      "frequencias": [
+        [
+          "depressao",
+          10
+        ],
+        [
+          "qualidade",
+          8
+        ],
+        [
+          "paciente",
+          7
+        ],
+        [
+          "vida",
+          6
+        ],
+        [
+          "sf",
+          5
+        ],
+        [
+          "percepcao",
+          4
+        ],
+        [
+          "saude",
+          4
+        ],
+        [
+          "fibromialgia",
+          3
+        ],
+        [
+          "escala",
+          3
+        ],
+        [
+          "mostrou-se",
+          3
+        ],
+        [
+          "prevalencia",
+          2
+        ],
+        [
+          "sindrome",
+          2
+        ],
+        [
+          "health",
+          2
+        ],
+        [
+          "ghq",
+          2
+        ],
+        [
+          "escore",
+          2
+        ],
+        [
+          "responsavelpela",
+          2
+        ],
+        [
+          "dor",
+          2
+        ],
+        [
+          "funcionalidade",
+          2
+        ],
+        [
+          "social",
+          2
+        ],
+        [
+          "sensacao",
+          2
+        ],
+        [
+          "berber",
+          2
+        ],
+        [
+          "objetivo",
+          1
+        ],
+        [
+          "estimar",
+          1
+        ],
+        [
+          "condicao",
+          1
+        ],
+        [
+          "avaliar",
+          1
+        ],
+        [
+          "magnitude",
+          1
+        ],
+        [
+          "associacao",
+          1
+        ],
+        [
+          "adepressao",
+          1
+        ],
+        [
+          "metodo",
+          1
+        ],
+        [
+          "selecionado",
+          1
+        ],
+        [
+          "compareceram",
+          1
+        ],
+        [
+          "consulta",
+          1
+        ],
+        [
+          "medica",
+          1
+        ],
+        [
+          "duasinstituicoe",
+          1
+        ],
+        [
+          "publica",
+          1
+        ],
+        [
+          "consultorio",
+          1
+        ],
+        [
+          "particulare",
+          1
+        ],
+        [
+          "reumatologia",
+          1
+        ],
+        [
+          "aplicado",
+          1
+        ],
+        [
+          "doi",
+          1
+        ],
+        [
+          "questionario",
+          1
+        ],
+        [
+          "general",
+          1
+        ],
+        [
+          "questionaire",
+          1
+        ],
+        [
+          "rastrear",
+          1
+        ],
+        [
+          "medical",
+          1
+        ],
+        [
+          "outcome",
+          1
+        ],
+        [
+          "short",
+          1
+        ],
+        [
+          "form",
+          1
+        ],
+        [
+          "survey",
+          1
+        ],
+        [
+          "medir",
+          1
+        ],
+        [
+          "composto",
+          1
+        ],
+        [
+          "abordam",
+          1
+        ],
+        [
+          "vario",
+          1
+        ],
+        [
+          "aspecto",
+          1
+        ],
+        [
+          "daqualidade",
+          1
+        ],
+        [
+          "realizaram-se",
+          1
+        ],
+        [
+          "analise",
+          1
+        ],
+        [
+          "uni",
+          1
+        ],
+        [
+          "multivariada",
+          1
+        ],
+        [
+          "entreo",
+          1
+        ],
+        [
+          "obtido",
+          1
+        ],
+        [
+          "resultado",
+          1
+        ],
+        [
+          "concluiu-se",
+          1
+        ],
+        [
+          "leve",
+          1
+        ],
+        [
+          "moderada",
+          1
+        ],
+        [
+          "severa",
+          1
+        ],
+        [
+          "queda",
+          1
+        ],
+        [
+          "estatisticamente",
+          1
+        ],
+        [
+          "significativa",
+          1
+        ],
+        [
+          "devida",
+          1
+        ],
+        [
+          "seguinte",
+          1
+        ],
+        [
+          "condicionamento",
+          1
+        ],
+        [
+          "fisico",
+          1
+        ],
+        [
+          "funcionalidadefisica",
+          1
+        ],
+        [
+          "mental",
+          1
+        ],
+        [
+          "funcio-nalidade",
+          1
+        ],
+        [
+          "emocional",
+          1
+        ],
+        [
+          "conclusoe",
+          1
+        ],
+        [
+          "influenciar",
+          1
+        ],
+        [
+          "negativamente",
+          1
+        ],
+        [
+          "aumentar",
+          1
+        ],
+        [
+          "incapacidade",
+          1
+        ],
+        [
+          "tornar",
+          1
+        ],
+        [
+          "aadesao",
+          1
+        ],
+        [
+          "tratamento",
+          1
+        ],
+        [
+          "mai",
+          1
+        ],
+        [
+          "dificil",
+          1
+        ],
+        [
+          "diminuir",
+          1
+        ],
+        [
+          "relacoessociai",
+          1
+        ],
+        [
+          "apresenta",
+          1
+        ],
+        [
+          "tendencia",
+          1
+        ],
+        [
+          "isolamento",
+          1
+        ],
+        [
+          "sentimentosde",
+          1
+        ],
+        [
+          "derrota",
+          1
+        ],
+        [
+          "frustracao",
+          1
+        ],
+        [
+          "aumento",
+          1
+        ],
+        [
+          "idade",
+          1
+        ],
+        [
+          "melhora",
+          1
+        ],
+        [
+          "dolorosa",
+          1
+        ],
+        [
+          "vitalidade",
+          1
+        ],
+        [
+          "tempo",
+          1
+        ],
+        [
+          "diag",
+          1
+        ],
+        [
+          "nostico",
+          1
+        ],
+        [
+          "associado",
+          1
+        ],
+        [
+          "melhor",
+          1
+        ],
+        [
+          "palavras-chave",
+          1
+        ],
+        [
+          "vidaprevalencia",
+          1
+        ],
+        [
+          "relacao",
+          1
+        ],
+        [
+          "prevalence",
+          1
+        ],
+        [
+          "depression",
+          1
+        ],
+        [
+          "relationship",
+          1
+        ],
+        [
+          "quality",
+          1
+        ],
+        [
+          "life",
+          1
+        ],
+        [
+          "patient",
+          1
+        ],
+        [
+          "fibromyalgia",
+          1
+        ],
+        [
+          "syndrome",
+          1
+        ],
+        [
+          "joana",
+          1
+        ],
+        [
+          "souza",
+          1
+        ],
+        [
+          "santo",
+          1
+        ],
+        [
+          "emil",
+          1
+        ],
+        [
+          "kupek",
+          1
+        ],
+        [
+          "saulo",
+          1
+        ],
+        [
+          "caire",
+          1
+        ]
+      ],
+      "termos_unicos": 123,
+      "total_termos_significativos": 177
     },
     "prevalencia_fibromialgia_atualizac_resumo.txt": {
-      "DocID": "doc_20",
-      "total_termos_significativos": 133,
-      "termos_unicos": 88,
+      "DocID": "D18",
       "frequencias": [
         [
           "fm",
@@ -11469,12 +10688,1686 @@
           "embase",
           1
         ]
-      ]
+      ],
+      "termos_unicos": 88,
+      "total_termos_significativos": 133
+    },
+    "Prevalencia_Fibromialgia_Revisao_Literatura_resumo.txt": {
+      "DocID": "D19",
+      "frequencias": [
+        [
+          "prevalencia",
+          15
+        ],
+        [
+          "fm",
+          6
+        ],
+        [
+          "populacao",
+          6
+        ],
+        [
+          "fibromialgia",
+          5
+        ],
+        [
+          "literatura",
+          3
+        ],
+        [
+          "crianca",
+          3
+        ],
+        [
+          "dor",
+          3
+        ],
+        [
+          "cronica",
+          3
+        ],
+        [
+          "difusa",
+          3
+        ],
+        [
+          "estudo",
+          3
+        ],
+        [
+          "objetivo",
+          2
+        ],
+        [
+          "revisao",
+          2
+        ],
+        [
+          "criterio",
+          2
+        ],
+        [
+          "acr",
+          2
+        ],
+        [
+          "realizado",
+          2
+        ],
+        [
+          "fibromyalgia",
+          2
+        ],
+        [
+          "prevalence",
+          2
+        ],
+        [
+          "artigo",
+          2
+        ],
+        [
+          "populacoe",
+          2
+        ],
+        [
+          "adulta",
+          2
+        ],
+        [
+          "mulhere",
+          2
+        ],
+        [
+          "adolescente",
+          2
+        ],
+        [
+          "valore",
+          2
+        ],
+        [
+          "mai",
+          2
+        ],
+        [
+          "introducao",
+          1
+        ],
+        [
+          "realizar",
+          1
+        ],
+        [
+          "proposto",
+          1
+        ],
+        [
+          "american",
+          1
+        ],
+        [
+          "college",
+          1
+        ],
+        [
+          "rheumatology",
+          1
+        ],
+        [
+          "metodo",
+          1
+        ],
+        [
+          "levan",
+          1
+        ],
+        [
+          "tamento",
+          1
+        ],
+        [
+          "bibliografico",
+          1
+        ],
+        [
+          "periodo",
+          1
+        ],
+        [
+          "base",
+          1
+        ],
+        [
+          "dado",
+          1
+        ],
+        [
+          "medline",
+          1
+        ],
+        [
+          "lilac",
+          1
+        ],
+        [
+          "embase",
+          1
+        ],
+        [
+          "isi",
+          1
+        ],
+        [
+          "utilizada",
+          1
+        ],
+        [
+          "pala",
+          1
+        ],
+        [
+          "vras-chave",
+          1
+        ],
+        [
+          "correspondente",
+          1
+        ],
+        [
+          "ingle",
+          1
+        ],
+        [
+          "selecionado",
+          1
+        ],
+        [
+          "apo",
+          1
+        ],
+        [
+          "leitura",
+          1
+        ],
+        [
+          "resumo",
+          1
+        ],
+        [
+          "excluido",
+          1
+        ],
+        [
+          "referiam",
+          1
+        ],
+        [
+          "doenca",
+          1
+        ],
+        [
+          "somente",
+          1
+        ],
+        [
+          "abordavam",
+          1
+        ],
+        [
+          "tema",
+          1
+        ],
+        [
+          "sele",
+          1
+        ],
+        [
+          "cionado",
+          1
+        ],
+        [
+          "agrupado",
+          1
+        ],
+        [
+          "categoria",
+          1
+        ],
+        [
+          "especifica",
+          1
+        ],
+        [
+          "resultado",
+          1
+        ],
+        [
+          "aponta",
+          1
+        ],
+        [
+          "sendo",
+          1
+        ],
+        [
+          "prevalente",
+          1
+        ],
+        [
+          "homen",
+          1
+        ],
+        [
+          "especialmente",
+          1
+        ],
+        [
+          "faixa",
+          1
+        ],
+        [
+          "etaria",
+          1
+        ],
+        [
+          "especiai",
+          1
+        ],
+        [
+          "sao",
+          1
+        ],
+        [
+          "escasso",
+          1
+        ],
+        [
+          "conclusivo",
+          1
+        ],
+        [
+          "tambem",
+          1
+        ],
+        [
+          "conclusao",
+          1
+        ],
+        [
+          "devem",
+          1
+        ],
+        [
+          "estimulado",
+          1
+        ],
+        [
+          "joven",
+          1
+        ],
+        [
+          "palavras-chave",
+          1
+        ],
+        [
+          "populacaoa",
+          1
+        ],
+        [
+          "literature",
+          1
+        ],
+        [
+          "review",
+          1
+        ],
+        [
+          "alane",
+          1
+        ],
+        [
+          "cavalcante",
+          1
+        ],
+        [
+          "juliana",
+          1
+        ],
+        [
+          "sauer",
+          1
+        ],
+        [
+          "suellen",
+          1
+        ],
+        [
+          "chalot",
+          1
+        ],
+        [
+          "ana",
+          1
+        ],
+        [
+          "assumpcao",
+          1
+        ],
+        [
+          "lai",
+          1
+        ],
+        [
+          "lage",
+          1
+        ],
+        [
+          "luciana",
+          1
+        ],
+        [
+          "akemi",
+          1
+        ],
+        [
+          "matsutani",
+          1
+        ],
+        [
+          "amelia",
+          1
+        ],
+        [
+          "pasqual",
+          1
+        ],
+        [
+          "marque",
+          1
+        ],
+        [
+          "departamento",
+          1
+        ],
+        [
+          "fisioterapia",
+          1
+        ],
+        [
+          "fonoaudiologia",
+          1
+        ],
+        [
+          "terapia",
+          1
+        ],
+        [
+          "ocupacional",
+          1
+        ],
+        [
+          "faculdade",
+          1
+        ],
+        [
+          "medicina",
+          1
+        ],
+        [
+          "universidade",
+          1
+        ]
+      ],
+      "termos_unicos": 106,
+      "total_termos_significativos": 160
+    },
+    "Trabalho1 IHM_resumo.txt": {
+      "DocID": "D20",
+      "frequencias": [
+        [
+          "interface",
+          9
+        ],
+        [
+          "ihm",
+          7
+        ],
+        [
+          "seguranca",
+          6
+        ],
+        [
+          "critico",
+          5
+        ],
+        [
+          "usabilidade",
+          5
+        ],
+        [
+          "conceito",
+          4
+        ],
+        [
+          "usuario",
+          4
+        ],
+        [
+          "falha",
+          4
+        ],
+        [
+          "aviacao",
+          3
+        ],
+        [
+          "medicina",
+          3
+        ],
+        [
+          "industria",
+          3
+        ],
+        [
+          "automotiva",
+          3
+        ],
+        [
+          "evolucao",
+          3
+        ],
+        [
+          "contexto",
+          3
+        ],
+        [
+          "humano",
+          3
+        ],
+        [
+          "diretamente",
+          3
+        ],
+        [
+          "confiabilidade",
+          3
+        ],
+        [
+          "vida",
+          3
+        ],
+        [
+          "humana",
+          3
+        ],
+        [
+          "operacional",
+          3
+        ],
+        [
+          "erro",
+          3
+        ],
+        [
+          "tecnologia",
+          2
+        ],
+        [
+          "tendencia",
+          2
+        ],
+        [
+          "homem",
+          2
+        ],
+        [
+          "maquina",
+          2
+        ],
+        [
+          "definicao",
+          2
+        ],
+        [
+          "fundamentai",
+          2
+        ],
+        [
+          "historico",
+          2
+        ],
+        [
+          "aplicacoe",
+          2
+        ],
+        [
+          "objetivo",
+          2
+        ],
+        [
+          "maneira",
+          2
+        ],
+        [
+          "intuitiva",
+          2
+        ],
+        [
+          "segura",
+          2
+        ],
+        [
+          "ambiente",
+          2
+        ],
+        [
+          "papel",
+          2
+        ],
+        [
+          "essencial",
+          2
+        ],
+        [
+          "desempenho",
+          2
+        ],
+        [
+          "precisao",
+          2
+        ],
+        [
+          "resultar",
+          2
+        ],
+        [
+          "consequencia",
+          2
+        ],
+        [
+          "dano",
+          2
+        ],
+        [
+          "perda",
+          2
+        ],
+        [
+          "nao",
+          2
+        ],
+        [
+          "apena",
+          2
+        ],
+        [
+          "informacoe",
+          2
+        ],
+        [
+          "ma",
+          2
+        ],
+        [
+          "tambem",
+          2
+        ],
+        [
+          "rapida",
+          2
+        ],
+        [
+          "norma",
+          2
+        ],
+        [
+          "eficiencia",
+          2
+        ],
+        [
+          "ligada",
+          2
+        ],
+        [
+          "operador",
+          2
+        ],
+        [
+          "andre",
+          1
+        ],
+        [
+          "souza",
+          1
+        ],
+        [
+          "danilo",
+          1
+        ],
+        [
+          "mato",
+          1
+        ],
+        [
+          "victor",
+          1
+        ],
+        [
+          "frota",
+          1
+        ],
+        [
+          "professora",
+          1
+        ],
+        [
+          "cristina",
+          1
+        ],
+        [
+          "maria",
+          1
+        ],
+        [
+          "valadare",
+          1
+        ],
+        [
+          "lima",
+          1
+        ],
+        [
+          "disciplina",
+          1
+        ],
+        [
+          "turno",
+          1
+        ],
+        [
+          "noturno",
+          1
+        ],
+        [
+          "divinopoli",
+          1
+        ],
+        [
+          "outubro",
+          1
+        ],
+        [
+          "sumario",
+          1
+        ],
+        [
+          "metodo",
+          1
+        ],
+        [
+          "envolvido",
+          1
+        ],
+        [
+          "pratica",
+          1
+        ],
+        [
+          "reai",
+          1
+        ],
+        [
+          "beneficio",
+          1
+        ],
+        [
+          "desafio",
+          1
+        ],
+        [
+          "perspectiva",
+          1
+        ],
+        [
+          "futura",
+          1
+        ],
+        [
+          "conclusao",
+          1
+        ],
+        [
+          "licoe",
+          1
+        ],
+        [
+          "aprendida",
+          1
+        ],
+        [
+          "referencia",
+          1
+        ],
+        [
+          "bibliografica",
+          1
+        ],
+        [
+          "ocorre",
+          1
+        ],
+        [
+          "comunicacao",
+          1
+        ],
+        [
+          "computacional",
+          1
+        ],
+        [
+          "principal",
+          1
+        ],
+        [
+          "permitir",
+          1
+        ],
+        [
+          "monitore",
+          1
+        ],
+        [
+          "controle",
+          1
+        ],
+        [
+          "interaja",
+          1
+        ],
+        [
+          "eficiente",
+          1
+        ],
+        [
+          "operacao",
+          1
+        ],
+        [
+          "complexo",
+          1
+        ],
+        [
+          "assume",
+          1
+        ],
+        [
+          "poi",
+          1
+        ],
+        [
+          "depende",
+          1
+        ],
+        [
+          "clareza",
+          1
+        ],
+        [
+          "apresentada",
+          1
+        ],
+        [
+          "cuja",
+          1
+        ],
+        [
+          "severa",
+          1
+        ],
+        [
+          "risco",
+          1
+        ],
+        [
+          "ambientai",
+          1
+        ],
+        [
+          "economica",
+          1
+        ],
+        [
+          "significativa",
+          1
+        ],
+        [
+          "motivo",
+          1
+        ],
+        [
+          "desenvolvida",
+          1
+        ],
+        [
+          "tipo",
+          1
+        ],
+        [
+          "precisam",
+          1
+        ],
+        [
+          "atender",
+          1
+        ],
+        [
+          "criterio",
+          1
+        ],
+        [
+          "rigoroso",
+          1
+        ],
+        [
+          "disponibilidade",
+          1
+        ],
+        [
+          "apresenta",
+          1
+        ],
+        [
+          "atua",
+          1
+        ],
+        [
+          "integrante",
+          1
+        ],
+        [
+          "prevenindo",
+          1
+        ],
+        [
+          "auxiliando",
+          1
+        ],
+        [
+          "tomada",
+          1
+        ],
+        [
+          "decisao",
+          1
+        ],
+        [
+          "situacoe",
+          1
+        ],
+        [
+          "emer",
+          1
+        ],
+        [
+          "gencia",
+          1
+        ],
+        [
+          "central",
+          1
+        ],
+        [
+          "engenharia",
+          1
+        ],
+        [
+          "refere-se",
+          1
+        ],
+        [
+          "facilidade",
+          1
+        ],
+        [
+          "consegue",
+          1
+        ],
+        [
+          "interagir",
+          1
+        ],
+        [
+          "alcancar",
+          1
+        ],
+        [
+          "acordo",
+          1
+        ],
+        [
+          "iso",
+          1
+        ],
+        [
+          "envolve",
+          1
+        ],
+        [
+          "fatore",
+          1
+        ],
+        [
+          "eficacia",
+          1
+        ],
+        [
+          "satisfacao",
+          1
+        ],
+        [
+          "reducao",
+          1
+        ],
+        [
+          "seja",
+          1
+        ],
+        [
+          "mai",
+          1
+        ],
+        [
+          "consistente",
+          1
+        ],
+        [
+          "probabilidade",
+          1
+        ],
+        [
+          "funcional",
+          1
+        ],
+        [
+          "definido",
+          1
+        ],
+        [
+          "iec",
+          1
+        ],
+        [
+          "capacidade",
+          1
+        ],
+        [
+          "executar",
+          1
+        ],
+        [
+          "funcoe",
+          1
+        ],
+        [
+          "mesmo",
+          1
+        ],
+        [
+          "interna",
+          1
+        ],
+        [
+          "externa",
+          1
+        ],
+        [
+          "significa",
+          1
+        ],
+        [
+          "garantir",
+          1
+        ],
+        [
+          "elemento",
+          1
+        ],
+        [
+          "alerta",
+          1
+        ],
+        [
+          "mensagen",
+          1
+        ],
+        [
+          "comando",
+          1
+        ],
+        [
+          "indicadore",
+          1
+        ],
+        [
+          "sejam",
+          1
+        ],
+        [
+          "confiavei",
+          1
+        ],
+        [
+          "compreensivei",
+          1
+        ],
+        [
+          "priorizem",
+          1
+        ],
+        [
+          "resposta",
+          1
+        ],
+        [
+          "portanto",
+          1
+        ],
+        [
+          "eficaz",
+          1
+        ],
+        [
+          "equilibrar",
+          1
+        ],
+        [
+          "garantindo",
+          1
+        ],
+        [
+          "tenha",
+          1
+        ],
+        [
+          "acesso",
+          1
+        ],
+        [
+          "correta",
+          1
+        ],
+        [
+          "certo",
+          1
+        ],
+        [
+          "formato",
+          1
+        ],
+        [
+          "facilite",
+          1
+        ],
+        [
+          "acao",
+          1
+        ],
+        [
+          "imediata",
+          1
+        ],
+        [
+          "negligencia",
+          1
+        ],
+        [
+          "qualquer",
+          1
+        ],
+        [
+          "aspecto",
+          1
+        ],
+        [
+          "comprometer",
+          1
+        ],
+        [
+          "integridade",
+          1
+        ],
+        [
+          "fisica",
+          1
+        ],
+        [
+          "necessidade",
+          1
+        ],
+        [
+          "grave",
+          1
+        ],
+        [
+          "materiai",
+          1
+        ],
+        [
+          "significativo",
+          1
+        ],
+        [
+          "surgimento",
+          1
+        ],
+        [
+          "automatizado",
+          1
+        ],
+        [
+          "tornou-se",
+          1
+        ],
+        [
+          "fator",
+          1
+        ],
+        [
+          "determinante",
+          1
+        ],
+        [
+          "sucesso",
+          1
+        ]
+      ],
+      "termos_unicos": 189,
+      "total_termos_significativos": 282
+    },
+    "Validacao_Versao_Brasileira_Fibromyalgia_Impact_resumo.txt": {
+      "DocID": "D21",
+      "frequencias": [
+        [
+          "versao",
+          11
+        ],
+        [
+          "doi",
+          6
+        ],
+        [
+          "paciente",
+          5
+        ],
+        [
+          "professore",
+          4
+        ],
+        [
+          "avaliacao",
+          4
+        ],
+        [
+          "questoe",
+          4
+        ],
+        [
+          "fibromyalgia",
+          3
+        ],
+        [
+          "impact",
+          3
+        ],
+        [
+          "questionnaire",
+          3
+        ],
+        [
+          "fiq",
+          3
+        ],
+        [
+          "fm",
+          3
+        ],
+        [
+          "ingle",
+          3
+        ],
+        [
+          "teste",
+          3
+        ],
+        [
+          "nao-aplicavel",
+          3
+        ],
+        [
+          "brasileira",
+          2
+        ],
+        [
+          "fibromialgia",
+          2
+        ],
+        [
+          "lingua",
+          2
+        ],
+        [
+          "inglesa",
+          2
+        ],
+        [
+          "reumatologista",
+          2
+        ],
+        [
+          "fisioterapeuta",
+          2
+        ],
+        [
+          "mai",
+          2
+        ],
+        [
+          "resposta",
+          2
+        ],
+        [
+          "mesmo",
+          2
+        ],
+        [
+          "aplicacao",
+          2
+        ],
+        [
+          "nao",
+          2
+        ],
+        [
+          "houve",
+          2
+        ],
+        [
+          "carinha",
+          2
+        ],
+        [
+          "objetivo",
+          1
+        ],
+        [
+          "desenvolver",
+          1
+        ],
+        [
+          "transcultural",
+          1
+        ],
+        [
+          "populacao",
+          1
+        ],
+        [
+          "analisar",
+          1
+        ],
+        [
+          "validade",
+          1
+        ],
+        [
+          "eficacia",
+          1
+        ],
+        [
+          "aplicado",
+          1
+        ],
+        [
+          "metodo",
+          1
+        ],
+        [
+          "participaram",
+          1
+        ],
+        [
+          "estudo",
+          1
+        ],
+        [
+          "diagnosticado",
+          1
+        ],
+        [
+          "criterio",
+          1
+        ],
+        [
+          "american",
+          1
+        ],
+        [
+          "college",
+          1
+        ],
+        [
+          "rheumatology",
+          1
+        ],
+        [
+          "acr",
+          1
+        ],
+        [
+          "baseado",
+          1
+        ],
+        [
+          "orientacoe",
+          1
+        ],
+        [
+          "guillemin",
+          1
+        ],
+        [
+          "et",
+          1
+        ],
+        [
+          "al",
+          1
+        ],
+        [
+          "convidado",
+          1
+        ],
+        [
+          "procedimento",
+          1
+        ],
+        [
+          "seguiu",
+          1
+        ],
+        [
+          "etapa",
+          1
+        ],
+        [
+          "traducao",
+          1
+        ],
+        [
+          "inicial",
+          1
+        ],
+        [
+          "dua",
+          1
+        ],
+        [
+          "traducoe",
+          1
+        ],
+        [
+          "unica",
+          1
+        ],
+        [
+          "nativo",
+          1
+        ],
+        [
+          "reuniao",
+          1
+        ],
+        [
+          "consenso",
+          1
+        ],
+        [
+          "equivalencia",
+          1
+        ],
+        [
+          "cultural",
+          1
+        ],
+        [
+          "confiabilidade",
+          1
+        ],
+        [
+          "reproduti",
+          1
+        ],
+        [
+          "bilidade",
+          1
+        ],
+        [
+          "aplicada",
+          1
+        ],
+        [
+          "tendo",
+          1
+        ],
+        [
+          "item",
+          1
+        ],
+        [
+          "substituicao",
+          1
+        ],
+        [
+          "possivei",
+          1
+        ],
+        [
+          "conceito",
+          1
+        ],
+        [
+          "resultando",
+          1
+        ],
+        [
+          "avaliadore",
+          1
+        ],
+        [
+          "fizeram",
+          1
+        ],
+        [
+          "entrevista",
+          1
+        ],
+        [
+          "intervalo",
+          1
+        ],
+        [
+          "apo",
+          1
+        ],
+        [
+          "periodo",
+          1
+        ],
+        [
+          "questionario",
+          1
+        ],
+        [
+          "reaplicado",
+          1
+        ],
+        [
+          "avaliador",
+          1
+        ],
+        [
+          "resultado",
+          1
+        ],
+        [
+          "sendo",
+          1
+        ],
+        [
+          "mudado",
+          1
+        ],
+        [
+          "texto",
+          1
+        ],
+        [
+          "porem",
+          1
+        ],
+        [
+          "dificuldade",
+          1
+        ],
+        [
+          "compreensao",
+          1
+        ],
+        [
+          "escala",
+          1
+        ],
+        [
+          "visuai",
+          1
+        ],
+        [
+          "analogica",
+          1
+        ],
+        [
+          "acrescida",
+          1
+        ],
+        [
+          "extremo",
+          1
+        ],
+        [
+          "esquerda",
+          1
+        ],
+        [
+          "feliz",
+          1
+        ],
+        [
+          "direita",
+          1
+        ],
+        [
+          "infeliz",
+          1
+        ],
+        [
+          "processo",
+          1
+        ],
+        [
+          "deu",
+          1
+        ],
+        [
+          "validacao",
+          1
+        ],
+        [
+          "validation",
+          1
+        ],
+        [
+          "brazilian",
+          1
+        ],
+        [
+          "version",
+          1
+        ],
+        [
+          "amelia",
+          1
+        ],
+        [
+          "pasqual",
+          1
+        ],
+        [
+          "marque",
+          1
+        ],
+        [
+          "adriana",
+          1
+        ],
+        [
+          "barsante",
+          1
+        ],
+        [
+          "santo",
+          1
+        ],
+        [
+          "ana",
+          1
+        ],
+        [
+          "assumpcao",
+          1
+        ],
+        [
+          "luciana",
+          1
+        ],
+        [
+          "akemi",
+          1
+        ],
+        [
+          "matsutani",
+          1
+        ],
+        [
+          "lai",
+          1
+        ],
+        [
+          "lage",
+          1
+        ],
+        [
+          "carlo",
+          1
+        ],
+        [
+          "alberto",
+          1
+        ]
+      ],
+      "termos_unicos": 119,
+      "total_termos_significativos": 176
     }
-  },
-  "meta": {
-    "total_documentos": 20,
-    "total_termos_unicos": 1409,
-    "data_geracao": "2025-11-01T22:06:18.903937"
   }
 }

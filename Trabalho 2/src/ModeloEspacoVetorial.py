@@ -14,15 +14,15 @@ class ModeloEspacoVetorial:
         self.carregar_indice()
 
     def calcular_tf(self, freq: int, max_freq: int) -> float:
-        """Calcula TF normalizado (0.5 + 0.5 * freq/max_freq)"""
+        #Calcula TF normalizado (0.5 + 0.5 * freq/max_freq)
         return 0.5 + 0.5 * (freq / max_freq)
 
     def calcular_idf(self, termo: str, total_docs: int, docs_com_termo: int) -> float:
-        """Calcula IDF (log(N/df))"""
+        #Calcula IDF (log(N/df))
         return math.log10(total_docs / docs_com_termo) if docs_com_termo > 0 else 0
 
     def carregar_indice(self):
-        """Carrega dados do arquivo frequencies_summary.json e calcula os pesos TF-IDF"""
+        #Carrega dados do arquivo frequencies_summary.json e calcula os pesos TF-IDF
         src_dir = os.path.dirname(__file__)
         raiz = os.path.abspath(os.path.join(src_dir, '..'))
         freq_json_path = os.path.join(raiz, 'results', 'frequencies_summary.json')
@@ -73,7 +73,7 @@ class ModeloEspacoVetorial:
             self.normas[doc_id] = math.sqrt(soma_quadrados)
 
     def criar_vetor_consulta(self, consulta: str) -> Dict[str, float]:
-        """Cria vetor TF-IDF para a consulta"""
+        # Cria vetor TF-IDF para a consulta
         # Tokeniza e conta frequências
         termos = consulta.lower().split()
         if not termos:
@@ -93,7 +93,7 @@ class ModeloEspacoVetorial:
         return pesos
 
     def similaridade_cosseno(self, vetor_consulta: Dict[str, float], doc_id: str) -> float:
-        """Calcula similaridade por cosseno entre consulta e documento"""
+        # Calcula similaridade por cosseno entre consulta e documento
         if not vetor_consulta or doc_id not in self.normas:
             return 0.0
 
@@ -113,7 +113,7 @@ class ModeloEspacoVetorial:
         return produto / (norma_consulta * self.normas[doc_id])
 
     def buscar(self, consulta: str, limite: int = 10) -> List[Tuple[str, float]]:
-        """Realiza busca vetorial e retorna documentos ranqueados por similaridade"""
+        # Realiza busca vetorial e retorna documentos ranqueados por similaridade
         # Cria vetor para a consulta
         vetor_consulta = self.criar_vetor_consulta(consulta)
         if not vetor_consulta:
@@ -131,7 +131,7 @@ class ModeloEspacoVetorial:
         return similaridades[:limite]
 
     def mostrar_resultados(self, resultados: List[Tuple[str, float]]):
-        """Mostra resultados formatados"""
+        # Mostra resultados formatados
         if not resultados:
             print("\nNenhum documento encontrado.")
             return

@@ -111,15 +111,54 @@ def processar_pasta_results():
 
 	# salvar um resumo de frequências em JSON em results/frequencies_summary.json
 	freq_json_path = os.path.join(pasta_results, 'frequencies_summary.json')
-	
-	# Estrutura: { "filename": [[token, count], ...], ... }
-	out = {}
-	for nome, freqs in resumo_freqs.items():
-		out[nome] = freqs.most_common()
-	with open(freq_json_path, 'w', encoding='utf-8') as jf:
-		json.dump(out, jf, ensure_ascii=False, indent=2)
 
-	print('Normalização concluída.')
+	# Construir estrutura compatível com os modelos:
+	# {
+	#   "indice_geral": ["termo1", "termo2", ...],
+	#   "documentos": {
+	#       "nome_resumo.txt": {
+	#           "DocID": "D1",
+	#           "frequencias": [["termo", count], ...],
+	#           "termos_unicos": N,
+	#           "total_termos_significativos": M
+	#       }, ...
+	#   }
+	# }
+	documentos = {}
+	indice_geral_set = set()
+	doc_counter = 0
+
+	for nome, freqs in resumo_freqs.items():
+		doc_counter += 1
+		doc_id = f"D{doc_counter}"
+		# freqs is a Counter
+		termos_unicos = len(freqs)
+		total_termos = sum(freqs.values())
+		# freqs.most_common() returns list of (term, count)
+		freq_list = freqs.most_common()
+
+		# Atualiza índice geral
+		for termo, _ in freq_list:
+			indice_geral_set.add(termo)
+
+		documentos[nome] = {
+			"DocID": doc_id,
+			"frequencias": freq_list,
+			"termos_unicos": termos_unicos,
+			"total_termos_significativos": total_termos
+		}
+
+	indice_geral = sorted(indice_geral_set)
+
+	dados_saida = {
+		"indice_geral": indice_geral,
+		"documentos": documentos
+	}
+
+	with open(freq_json_path, 'w', encoding='utf-8') as jf:
+		json.dump(dados_saida, jf, ensure_ascii=False, indent=2)
+
+	print(f'Normalização concluída. Arquivo de índice salvo em: {freq_json_path}')
 
 if __name__ == '__main__':
 	processar_pasta_results()
