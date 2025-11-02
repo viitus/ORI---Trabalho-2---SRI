@@ -46,10 +46,14 @@ def normalizar_token(token: str) -> str:
 			# ignora outros caracteres
 			continue
 	t = ''.join(chars).lower()
-	# Normalização simples para plural: remove 's' no final
-	if t.endswith('s'):
+	
+	# Normalização simples para plural: remove 's' e 'es' no final
+	if t.endswith('es') and len(t) > 3:
+		t = t[:-2]
+	elif t.endswith('s') and len(t) > 2:
 		t = t[:-1]
 	return t
+	
 
 
 def normalizar_arquivo(caminho_entrada: str, caminho_saida: str, stopwords: set) -> Counter:
@@ -112,53 +116,26 @@ def processar_pasta_results():
 	# salvar um resumo de frequências em JSON em results/frequencies_summary.json
 	freq_json_path = os.path.join(pasta_results, 'frequencies_summary.json')
 
-	# Construir estrutura compatível com os modelos:
-	# {
-	#   "indice_geral": ["termo1", "termo2", ...],
-	#   "documentos": {
-	#       "nome_resumo.txt": {
-	#           "DocID": "D1",
-	#           "frequencias": [["termo", count], ...],
-	#           "termos_unicos": N,
-	#           "total_termos_significativos": M
-	#       }, ...
-	#   }
-	# }
-	documentos = {}
-	indice_geral_set = set()
-	doc_counter = 0
+	# Formato simples requerido: { "Doc.pdf": [[termo, frequencia], ...], ... }
+	dados_simples = {}
 
 	for nome, freqs in resumo_freqs.items():
-		doc_counter += 1
-		doc_id = f"D{doc_counter}"
-		# freqs is a Counter
-		termos_unicos = len(freqs)
-		total_termos = sum(freqs.values())
-		# freqs.most_common() returns list of (term, count)
-		freq_list = freqs.most_common()
+		# nome típico: "Documento_resumo.txt". Queremos mapear para "Documento.pdf"
+		if nome.lower().endswith('_resumo.txt'):
+			base = nome[:-len('_resumo.txt')]
+		else:
+			base = os.path.splitext(nome)[0]
+		pdf_nome = base + '.pdf'
 
-		# Atualiza índice geral
-		for termo, _ in freq_list:
-			indice_geral_set.add(termo)
+		# freqs is a Counter -> converte para lista de pares [term, count]
+		freq_list = [[t, c] for t, c in freqs.most_common()]
+		dados_simples[pdf_nome] = freq_list
 
-		documentos[nome] = {
-			"DocID": doc_id,
-			"frequencias": freq_list,
-			"termos_unicos": termos_unicos,
-			"total_termos_significativos": total_termos
-		}
-
-	indice_geral = sorted(indice_geral_set)
-
-	dados_saida = {
-		"indice_geral": indice_geral,
-		"documentos": documentos
-	}
-
+	# Escreve o JSON simples
 	with open(freq_json_path, 'w', encoding='utf-8') as jf:
-		json.dump(dados_saida, jf, ensure_ascii=False, indent=2)
+		json.dump(dados_simples, jf, ensure_ascii=False, indent=2)
 
-	print(f'Normalização concluída. Arquivo de índice salvo em: {freq_json_path}')
+	print(f'Normalização concluída.\n\nSalvo em: {freq_json_path}')
 
 if __name__ == '__main__':
 	processar_pasta_results()

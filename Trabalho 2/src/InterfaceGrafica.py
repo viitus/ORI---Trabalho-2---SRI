@@ -91,15 +91,12 @@ class SistemaBuscaGUI:
         self.entrada_vetorial.pack(side='left', fill='x', expand=True)
         
         # Botão de busca
-        ttk.Button(frame_consulta, text="Buscar", 
-                  command=self.realizar_busca_vetorial).pack(side='left', padx=(5,0))
+        ttk.Button(frame_consulta, text="Buscar", command=self.realizar_busca_vetorial).pack(side='left', padx=(5,0))
 
         # Área de instruções
         frame_instrucoes = ttk.Frame(self.tab_vetorial)
         frame_instrucoes.pack(fill='x', padx=10, pady=5)
-        ttk.Label(frame_instrucoes, 
-                 text="Digite os termos da consulta separados por espaço.\nOs resultados serão ordenados por relevância.",
-                 justify='left').pack(anchor='w')
+        ttk.Label(frame_instrucoes, text="Digite os termos da consulta separados por espaço.\nOs resultados serão ordenados por relevância.", justify='left').pack(anchor='w')
 
         # Área de resultados
         frame_resultados = ttk.Frame(self.tab_vetorial)
@@ -118,25 +115,15 @@ class SistemaBuscaGUI:
         self.lista_arquivos = scrolledtext.ScrolledText(frame_lista, height=25)
         self.lista_arquivos.pack(fill='both', expand=True)
 
-        # Frame para botões de arquivo
-        frame_botoes_arquivo = ttk.Frame(self.tab_arquivos)
-        frame_botoes_arquivo.pack(fill='x', padx=10, pady=5)
+        # Frame para botões
+        frame_botoes = ttk.Frame(self.tab_arquivos)
+        frame_botoes.pack(fill='x', padx=10, pady=5)
 
-        # Botões para gerenciar arquivos
-        ttk.Button(frame_botoes_arquivo, text="Atualizar Lista", 
-                  command=self.atualizar_lista_arquivos).pack(side='left', padx=5)
-        ttk.Button(frame_botoes_arquivo, text="Abrir Pasta", 
+        # Botões para gerenciar documentos
+        ttk.Button(frame_botoes, text="Abrir Pasta", 
                   command=self.abrir_pasta_docs).pack(side='left', padx=5)
-
-        # Frame para botões de processamento
-        frame_botoes_proc = ttk.Frame(self.tab_arquivos)
-        frame_botoes_proc.pack(fill='x', padx=10, pady=5)
-
-        # Botões para processamento
-        ttk.Button(frame_botoes_proc, text="Extrair e Normalizar", 
-                  command=self.extrair_e_normalizar).pack(side='left', padx=5)
-        ttk.Button(frame_botoes_proc, text="Reiniciar Sistema", 
-                  command=self.reiniciar_sistema).pack(side='left', padx=5)
+        ttk.Button(frame_botoes, text="Reiniciar e Extrair", 
+                  command=self.reiniciar_e_extrair).pack(side='left', padx=5)
 
         # Carrega lista inicial
         self.atualizar_lista_arquivos()
@@ -222,12 +209,12 @@ class SistemaBuscaGUI:
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao processar documentos: {str(e)}")
 
-    def reiniciar_sistema(self):
-        """Reinicia o sistema, limpando e recriando os arquivos necessários"""
+    def reiniciar_e_extrair(self):
+        """Reinicia o sistema, limpa os arquivos e executa extração/normalização"""
         try:
             # Confirma com o usuário
             if not messagebox.askyesno("Confirmar", 
-                "Isso irá limpar todos os dados processados (pastas results e data). Continuar?"):
+                "Isso irá limpar todos os dados e realizar nova extração/normalização. Continuar?"):
                 return
 
             # Usa a função apagar_conteudo do Reiniciar.py para limpeza segura e recursiva
@@ -251,11 +238,29 @@ class SistemaBuscaGUI:
             else:
                 resumo_msgs.append("data: pasta não encontrada")
 
-            messagebox.showinfo("Sucesso", "Sistema reiniciado com sucesso!\n" + "\n".join(resumo_msgs))
-
-            # Recarrega a interface
+            # Executa extração e normalização após limpar
+            try:
+                extrator = ExtratorDeResumos()
+                resultado_extracao = extrator.processar_documentos()
+                processar_pasta_results()
+                
+                # Tenta recarregar os modelos
+                self.modelo_booleano = ModeloBooleano()
+                self.modelo_vetorial = ModeloEspacoVetorial()
+                self.modelos_carregados = True
+                
+                msg_sucesso = "Sistema reiniciado e dados reprocessados!\n"
+                msg_sucesso += "\n".join(resumo_msgs)
+                msg_sucesso += f"\n\nExtração concluída: {len(resultado_extracao)} arquivos processados"
+                
+                messagebox.showinfo("Sucesso", msg_sucesso)
+                
+            except Exception as e:
+                messagebox.showerror("Erro", f"Erro ao processar documentos: {str(e)}")
+                self.modelos_carregados = False
+            
+            # Atualiza a lista de arquivos
             self.atualizar_lista_arquivos()
-            self.modelos_carregados = False
 
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao reiniciar sistema: {str(e)}")
@@ -276,9 +281,7 @@ class SistemaBuscaGUI:
                 
             self.lista_arquivos.insert(tk.END, f"Total de documentos: {len(arquivos)}\n\n")
             for i, arquivo in enumerate(sorted(arquivos), 1):
-                caminho = os.path.join(self.pasta_docs, arquivo)
-                tamanho = os.path.getsize(caminho) / 1024  # KB
-                self.lista_arquivos.insert(tk.END, f"{i}. {arquivo}\n   Tamanho: {tamanho:.1f} KB\n\n")
+                self.lista_arquivos.insert(tk.END, f"{i}. {arquivo}\n\n")
                 
         except Exception as e:
             self.lista_arquivos.delete(1.0, tk.END)

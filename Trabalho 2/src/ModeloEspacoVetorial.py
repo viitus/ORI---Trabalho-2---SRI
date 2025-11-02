@@ -3,6 +3,7 @@ import json
 import math
 from typing import Dict, List, Tuple
 from collections import Counter
+from Normalizador import normalizar_token
 
 class ModeloEspacoVetorial:
     def __init__(self):
@@ -27,29 +28,29 @@ class ModeloEspacoVetorial:
         raiz = os.path.abspath(os.path.join(src_dir, '..'))
         freq_json_path = os.path.join(raiz, 'results', 'frequencies_summary.json')
 
+        # Novo formato simples: { "Doc.pdf": [[termo, freq], ...], ... }
         with open(freq_json_path, 'r', encoding='utf-8') as f:
             dados = json.load(f)
 
         # Primeiro, coleta informações básicas e calcula TF
-        total_docs = len(dados["documentos"])
+        total_docs = len(dados)
         docs_por_termo: Dict[str, int] = Counter()  # termo -> número de docs que contém
 
-        # Para cada documento, processa suas frequências
-        for nome_arquivo, info in dados["documentos"].items():
-            doc_id = info["DocID"]
-            self.documentos[doc_id] = info
-            self.doc_names[doc_id] = nome_arquivo.replace('_resumo.txt', '.pdf')
+        # Para cada documento (nome do PDF), processa suas frequências
+        for pdf_nome, freq_list in dados.items():
+            doc_id = pdf_nome  # usamos o nome do PDF como identificador
+            # converte lista de pares em dict de frequências
+            freqs = {t: int(c) for t, c in freq_list}
+            self.documentos[doc_id] = {"frequencias": freqs}
+            self.doc_names[doc_id] = pdf_nome
 
             # Encontra frequência máxima no documento para normalização do TF
-            freqs = dict(info["frequencias"])
             max_freq = max(freqs.values()) if freqs else 1
 
             # Para cada termo no documento
             for termo, freq in freqs.items():
-                # Inicializa estruturas se necessário
                 if termo not in self.indice:
                     self.indice[termo] = {}
-                
                 # Calcula e armazena TF normalizado
                 self.indice[termo][doc_id] = self.calcular_tf(freq, max_freq)
                 docs_por_termo[termo] += 1
@@ -74,13 +75,23 @@ class ModeloEspacoVetorial:
 
     def criar_vetor_consulta(self, consulta: str) -> Dict[str, float]:
         # Cria vetor TF-IDF para a consulta
-        # Tokeniza e conta frequências
-        termos = consulta.lower().split()
-        if not termos:
+        # Tokeniza, normaliza e conta frequências
+        tokens_raw = consulta.split()
+        if not tokens_raw:
+            return {}
+        
+        # Normaliza cada token da mesma forma que os documentos foram normalizados
+        termos_normalizados = []
+        for token in tokens_raw:
+            termo_norm = normalizar_token(token)
+            if termo_norm:  # Ignora tokens vazios após normalização
+                termos_normalizados.append(termo_norm)
+        
+        if not termos_normalizados:
             return {}
 
         # Conta frequências
-        freq_consulta = Counter(termos)
+        freq_consulta = Counter(termos_normalizados)
         max_freq = max(freq_consulta.values())
 
         # Calcula pesos TF-IDF

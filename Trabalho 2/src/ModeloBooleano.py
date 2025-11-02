@@ -1,6 +1,7 @@
 import os
 import json
 from typing import Set, Dict, List
+from Normalizador import normalizar_token
 
 class ModeloBooleano:
     def __init__(self):
@@ -14,28 +15,28 @@ class ModeloBooleano:
         src_dir = os.path.dirname(__file__)
         raiz = os.path.abspath(os.path.join(src_dir, '..'))
         freq_json_path = os.path.join(raiz, 'results', 'frequencies_summary.json')
-
+        # Novo formato simples esperado: { "Doc.pdf": [[termo, frequencia], ...], ... }
         with open(freq_json_path, 'r', encoding='utf-8') as f:
             dados = json.load(f)
 
-        # Constrói índice invertido: termo -> conjunto de DocIDs
-        for termo in dados["indice_geral"]:
-            self.indice[termo] = set()
+        # Constrói índice invertido: termo -> conjunto de document names (PDF)
+        for pdf_nome, freq_list in dados.items():
+            # Usamos o nome do PDF como o identificador do documento (doc_id)
+            doc_id = pdf_nome
+            self.doc_ids[pdf_nome] = doc_id
+            self.doc_names[doc_id] = pdf_nome
 
-        # Para cada documento, adiciona seu DocID ao conjunto de cada termo que contém
-        for nome_arquivo, info in dados["documentos"].items():
-            doc_id = info["DocID"]
-            self.doc_ids[nome_arquivo] = doc_id
-            self.doc_names[doc_id] = nome_arquivo
-            
-            # Adiciona documento aos conjuntos dos termos que possui
-            for termo, freq in info["frequencias"]:
-                if freq > 0:  # redundante, mas por segurança
+            for termo, freq in freq_list:
+                if termo not in self.indice:
+                    self.indice[termo] = set()
+                if freq > 0:
                     self.indice[termo].add(doc_id)
 
     def buscar_termo(self, termo: str) -> Set[str]:
         # Busca documentos que contêm um termo específico
-        return self.indice.get(termo, set())
+        # Normaliza o termo da mesma forma que os documentos foram normalizados
+        termo_normalizado = normalizar_token(termo)
+        return self.indice.get(termo_normalizado, set())
 
     def operador_and(self, conjunto1: Set[str], conjunto2: Set[str]) -> Set[str]:
         # Implementa o operador AND entre dois conjuntos de documentos
@@ -52,8 +53,8 @@ class ModeloBooleano:
 
     def processar_consulta(self, consulta: str) -> List[str]:
         # Processa uma consulta booleana e retorna a lista de documentos que correspondem
-        # Divide a consulta em tokens
-        tokens = consulta.lower().split()
+        # Divide a consulta em tokens (não precisa lowercase aqui, normalizar_token já faz isso)
+        tokens = consulta.split()
         
         if not tokens:
             return []
@@ -76,8 +77,8 @@ class ModeloBooleano:
                 pilha.append(resultado)
                 i += 2
                 
-            elif token == 'and' or token == 'or':
-                # AND/OR precisa de dois operandos
+            elif token.lower() == 'and' or token.lower() == 'or':
+                                # AND/OR precisa de dois operandos
                 if len(pilha) < 1 or i + 1 >= len(tokens):
                     raise ValueError(f"Operador {token.upper()} precisa de dois operandos")
                     
@@ -85,7 +86,7 @@ class ModeloBooleano:
                 # Pega próximo termo
                 prox_termo = tokens[i + 1]
                 
-                if prox_termo == 'not':
+                if prox_termo.lower() == 'not':
                     # Se próximo for NOT, processa ele primeiro
                     if i + 2 >= len(tokens):
                         raise ValueError("NOT deve ser seguido por um termo")
@@ -95,8 +96,8 @@ class ModeloBooleano:
                     op2 = self.buscar_termo(prox_termo)
                     i += 2
                 
-                # Aplica o operador
-                if token == 'and':
+                                # Aplica o operador
+                if token.lower() == 'and':
                     pilha.append(self.operador_and(op1, op2))
                 else:  # OR
                     pilha.append(self.operador_or(op1, op2))
@@ -109,14 +110,12 @@ class ModeloBooleano:
         if not pilha:
             return []
 
-        # Converte DocIDs para nomes de arquivo e remove sufixo _resumo.txt
+        # Converte DocIDs para nomes de arquivo PDF (no novo formato já usamos o nome do PDF)
         resultado_final = pilha[0]
         nomes_originais = []
         for doc_id in resultado_final:
-            nome_txt = self.doc_names[doc_id]
-            # Remove _resumo.txt do final e adiciona .pdf
-            nome_original = nome_txt.replace('_resumo.txt', '.pdf')
-            nomes_originais.append(nome_original)
+            nome_pdf = self.doc_names.get(doc_id, doc_id)
+            nomes_originais.append(nome_pdf)
         return sorted(nomes_originais)
 
 def main():

@@ -7,11 +7,6 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(mes
 
 
 class ExtratorDeResumos:
-    """Classe responsável por extrair resumos de PDFs em `docs/` e salvar em `results/resumo/`.
-
-    Mantém compatibilidade com a função antiga `extrair_resumos()` através de um wrapper.
-    """
-
     def __init__(self, pasta_docs: str = None, pasta_results: str = None,
                  max_palavras_texto: int = 1000, max_palavras_resumo: int = 300):
         src_dir = os.path.dirname(__file__)
@@ -21,6 +16,7 @@ class ExtratorDeResumos:
         self.pasta_resumo = os.path.join(self.pasta_results, 'resumo')
         self.max_palavras_texto = max_palavras_texto
         self.max_palavras_resumo = max_palavras_resumo
+        
         # Número de palavras a usar como fallback quando não for encontrado o marcador 'RESUMO'
         self.fallback_palavras = 500
 
@@ -55,10 +51,6 @@ class ExtratorDeResumos:
         return ' '.join(palavras).strip()
 
     def processar_documentos(self) -> List[Dict[str, str]]:
-        """Processa todos os PDFs em `pasta_docs`, extrai resumos e salva arquivos txt em `pasta_resumo`.
-
-        Retorna lista de dicionários com 'nome_arquivo' e 'texto'.
-        """
         resultados = []
 
         if not os.path.exists(self.pasta_docs):
@@ -102,10 +94,6 @@ class ExtratorDeResumos:
 
 
 def extrair_resumos() -> List[Dict[str, str]]:
-    """Função wrapper para compatibilidade com código existente.
-
-    Cria um `ExtratorDeResumos` e invoca `processar_documentos()`.
-    """
     extrator = ExtratorDeResumos()
     return extrator.processar_documentos()
 
