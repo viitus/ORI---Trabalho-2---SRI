@@ -4,12 +4,12 @@ import unicodedata
 import json
 from collections import Counter
 
-
+#----------------------------------------------------------------------------------------#
 def remover_acentos(texto: str) -> str:
 	nfkd = unicodedata.normalize('NFD', texto)
 	return ''.join([c for c in nfkd if not unicodedata.combining(c)])
 
-
+#----------------------------------------------------------------------------------------#
 def carregar_stopwords(caminho_stopwords: str) -> set:
 	palavras = set()
 	if not os.path.exists(caminho_stopwords):
@@ -31,7 +31,7 @@ def carregar_stopwords(caminho_stopwords: str) -> set:
 		palavras.add(w)
 	return palavras
 
-
+#----------------------------------------------------------------------------------------#
 def normalizar_token(token: str) -> str:
 	# Remove acentos
 	t = remover_acentos(token)
@@ -55,7 +55,7 @@ def normalizar_token(token: str) -> str:
 	return t
 	
 
-
+#----------------------------------------------------------------------------------------#
 def normalizar_arquivo(caminho_entrada: str, caminho_saida: str, stopwords: set) -> Counter:
 	with open(caminho_entrada, 'r', encoding='utf-8') as f:
 		texto = f.read()
@@ -84,7 +84,7 @@ def normalizar_arquivo(caminho_entrada: str, caminho_saida: str, stopwords: set)
 
 	return Counter(tokens_norm)
 
-
+#----------------------------------------------------------------------------------------#
 def processar_pasta_results():
 	src_dir = os.path.dirname(__file__)
 	raiz = os.path.abspath(os.path.join(src_dir, '..'))
@@ -94,17 +94,20 @@ def processar_pasta_results():
 	caminho_stop = os.path.join(raiz, 'stopwords.txt')
 
 	stopwords = carregar_stopwords(caminho_stop)
-
 	os.makedirs(pasta_normalizado, exist_ok=True)
 
 	resumo_freqs = {}
-
 	for nome in os.listdir(pasta_resumos):
 		if not nome.lower().endswith('.txt'):
 			continue
 		caminho = os.path.join(pasta_resumos, nome)
 
-		saida_nome = nome  # mantém o mesmo nome dentro de normalizado
+		# Constrói o nome do arquivo de saída como "Arquivo_termos.txt"
+		if nome.lower().endswith('_resumo.txt'):
+			base_nome = nome[:-len('_resumo.txt')]
+		else:
+			base_nome = os.path.splitext(nome)[0]
+		saida_nome = f"{base_nome}_termos.txt"
 		caminho_saida = os.path.join(pasta_normalizado, saida_nome)
 		try:
 			freqs = normalizar_arquivo(caminho, caminho_saida, stopwords)
@@ -113,19 +116,16 @@ def processar_pasta_results():
 		except Exception as e:
 			print(f"Erro ao normalizar {nome}: {e}")
 
-	# salvar um resumo de frequências em JSON em results/frequencies_summary.json
+	# salvar frequências em JSON em results/frequencies_summary.json
 	freq_json_path = os.path.join(pasta_results, 'frequencies_summary.json')
-
-	# Formato simples requerido: { "Doc.pdf": [[termo, frequencia], ...], ... }
 	dados_simples = {}
-
 	for nome, freqs in resumo_freqs.items():
 		# nome típico: "Documento_resumo.txt". Queremos mapear para "Documento.pdf"
 		if nome.lower().endswith('_resumo.txt'):
 			base = nome[:-len('_resumo.txt')]
 		else:
 			base = os.path.splitext(nome)[0]
-		pdf_nome = base + '.pdf'
+		pdf_nome = base
 
 		# freqs is a Counter -> converte para lista de pares [term, count]
 		freq_list = [[t, c] for t, c in freqs.most_common()]
@@ -137,5 +137,6 @@ def processar_pasta_results():
 
 	print(f'Normalização concluída.\n\nSalvo em: {freq_json_path}')
 
+#----------------------------------------------------------------------------------------#
 if __name__ == '__main__':
 	processar_pasta_results()

@@ -10,6 +10,7 @@ class ModeloBooleano:
         self.doc_names: Dict[str, str] = {}    # DocID -> nome_arquivo
         self.carregar_indice()
 
+    #----------------------------------------------------------------------------------------#
     def carregar_indice(self):
         # Carrega o índice do arquivo frequencies_summary.json
         src_dir = os.path.dirname(__file__)
@@ -32,25 +33,30 @@ class ModeloBooleano:
                 if freq > 0:
                     self.indice[termo].add(doc_id)
 
+    #----------------------------------------------------------------------------------------#
     def buscar_termo(self, termo: str) -> Set[str]:
         # Busca documentos que contêm um termo específico
         # Normaliza o termo da mesma forma que os documentos foram normalizados
         termo_normalizado = normalizar_token(termo)
         return self.indice.get(termo_normalizado, set())
 
+    #----------------------------------------------------------------------------------------#
     def operador_and(self, conjunto1: Set[str], conjunto2: Set[str]) -> Set[str]:
         # Implementa o operador AND entre dois conjuntos de documentos
         return conjunto1 & conjunto2
 
+    #----------------------------------------------------------------------------------------#
     def operador_or(self, conjunto1: Set[str], conjunto2: Set[str]) -> Set[str]:
         # Implementa o operador OR entre dois conjuntos de documentos
         return conjunto1 | conjunto2
 
+    #----------------------------------------------------------------------------------------#
     def operador_not(self, conjunto: Set[str]) -> Set[str]:
         # Implementa o operador NOT para um conjunto de documentos
         todos_docs = set(self.doc_ids.values())
         return todos_docs - conjunto
 
+    #----------------------------------------------------------------------------------------#
     def processar_consulta(self, consulta: str) -> List[str]:
         # Processa uma consulta booleana e retorna a lista de documentos que correspondem
         # Divide a consulta em tokens (não precisa lowercase aqui, normalizar_token já faz isso)
@@ -78,7 +84,7 @@ class ModeloBooleano:
                 i += 2
                 
             elif token.lower() == 'and' or token.lower() == 'or':
-                                # AND/OR precisa de dois operandos
+                # AND/OR precisa de dois operandos
                 if len(pilha) < 1 or i + 1 >= len(tokens):
                     raise ValueError(f"Operador {token.upper()} precisa de dois operandos")
                     
@@ -95,8 +101,7 @@ class ModeloBooleano:
                 else:
                     op2 = self.buscar_termo(prox_termo)
                     i += 2
-                
-                                # Aplica o operador
+                    # Aplica o operador
                 if token.lower() == 'and':
                     pilha.append(self.operador_and(op1, op2))
                 else:  # OR
@@ -109,15 +114,9 @@ class ModeloBooleano:
 
         if not pilha:
             return []
+        return sorted(list(pilha[0]))
 
-        # Converte DocIDs para nomes de arquivo PDF (no novo formato já usamos o nome do PDF)
-        resultado_final = pilha[0]
-        nomes_originais = []
-        for doc_id in resultado_final:
-            nome_pdf = self.doc_names.get(doc_id, doc_id)
-            nomes_originais.append(nome_pdf)
-        return sorted(nomes_originais)
-
+#----------------------------------------------------------------------------------------#
 def main():
     modelo = ModeloBooleano()
     
@@ -141,7 +140,6 @@ def main():
                 continue
                 
             resultados = modelo.processar_consulta(consulta)
-            
             print(f"\nDocumentos PDF encontrados ({len(resultados)}):")
             if resultados:
                 for i, doc in enumerate(resultados, 1):
@@ -154,5 +152,6 @@ def main():
         except Exception as e:
             print(f"Erro inesperado: {e}")
 
+#----------------------------------------------------------------------------------------#
 if __name__ == "__main__":
     main()

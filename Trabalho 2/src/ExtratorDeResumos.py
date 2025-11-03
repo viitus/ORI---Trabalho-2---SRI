@@ -7,8 +7,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s: %(mes
 
 
 class ExtratorDeResumos:
-    def __init__(self, pasta_docs: str = None, pasta_results: str = None,
-                 max_palavras_texto: int = 1000, max_palavras_resumo: int = 300):
+    def __init__(self, pasta_docs: str = None, pasta_results: str = None, max_palavras_texto: int = 1000, max_palavras_resumo: int = 300):
         src_dir = os.path.dirname(__file__)
         raiz = os.path.abspath(os.path.join(src_dir, '..'))
         self.pasta_docs = pasta_docs or os.path.join(raiz, 'docs')
@@ -19,9 +18,9 @@ class ExtratorDeResumos:
         
         # Número de palavras a usar como fallback quando não for encontrado o marcador 'RESUMO'
         self.fallback_palavras = 500
-
         os.makedirs(self.pasta_resumo, exist_ok=True)
 
+    #----------------------------------------------------------------------------------------#    
     def _extrair_texto_pdf(self, caminho_pdf: str) -> str:
         texto_completo = ""
         try:
@@ -36,6 +35,7 @@ class ExtratorDeResumos:
             logging.exception(f"Falha ao ler PDF: {caminho_pdf}")
         return texto_completo.strip()
 
+    #----------------------------------------------------------------------------------------#
     def _extrair_resumo_de_texto(self, texto: str) -> str:
         if not texto:
             return ""
@@ -50,6 +50,7 @@ class ExtratorDeResumos:
         palavras = palavras[:self.max_palavras_resumo]
         return ' '.join(palavras).strip()
 
+    #----------------------------------------------------------------------------------------#
     def processar_documentos(self) -> List[Dict[str, str]]:
         resultados = []
 
@@ -86,18 +87,16 @@ class ExtratorDeResumos:
                         logging.info("Resumo não encontrado; fallback salvo (primeiras %d palavras): %s", self.fallback_palavras, nome_saida)
                     else:
                         logging.info("Resumo e texto não encontrados em: %s", nome)
-
             except Exception:
                 logging.exception("Erro ao processar %s", nome)
-
         return resultados
 
-
+#----------------------------------------------------------------------------------------#
 def extrair_resumos() -> List[Dict[str, str]]:
     extrator = ExtratorDeResumos()
     return extrator.processar_documentos()
 
-
+#----------------------------------------------------------------------------------------#
 if __name__ == '__main__':
     logging.info("Iniciando extração de resumos...")
     res = extrair_resumos()

@@ -2,10 +2,9 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter import scrolledtext
 import os
-import subprocess
 from ModeloBooleano import ModeloBooleano
 from ModeloEspacoVetorial import ModeloEspacoVetorial
-from ExtratorDeResumos import ExtratorDeResumos, extrair_resumos
+from ExtratorDeResumos import ExtratorDeResumos
 from Normalizador import processar_pasta_results
 from pathlib import Path
 from Reiniciar import apagar_conteudo
@@ -51,6 +50,7 @@ class SistemaBuscaGUI:
         self.configurar_aba_vetorial()
         self.configurar_aba_arquivos()
 
+    #----------------------------------------------------------------------------------------#
     def configurar_aba_booleana(self):
         # Frame para a consulta
         frame_consulta = ttk.Frame(self.tab_booleana)
@@ -62,15 +62,12 @@ class SistemaBuscaGUI:
         self.entrada_booleana.pack(side='left', fill='x', expand=True)
         
         # Botão de busca
-        ttk.Button(frame_consulta, text="Buscar", 
-                  command=self.realizar_busca_booleana).pack(side='left', padx=(5,0))
+        ttk.Button(frame_consulta, text="Buscar", command=self.realizar_busca_booleana).pack(side='left', padx=(5,0))
 
         # Área de instruções
         frame_instrucoes = ttk.Frame(self.tab_booleana)
         frame_instrucoes.pack(fill='x', padx=10, pady=5)
-        ttk.Label(frame_instrucoes, 
-                 text="Operadores: AND, OR, NOT\nExemplos: termo1 AND termo2, termo1 OR NOT termo2",
-                 justify='left').pack(anchor='w')
+        ttk.Label(frame_instrucoes, text="Operadores: AND, OR, NOT\nExemplos: termo1 AND termo2, termo1 OR NOT termo2",justify='left').pack(anchor='w')
 
         # Área de resultados
         frame_resultados = ttk.Frame(self.tab_booleana)
@@ -80,6 +77,7 @@ class SistemaBuscaGUI:
         self.resultados_booleana = scrolledtext.ScrolledText(frame_resultados, height=20)
         self.resultados_booleana.pack(fill='both', expand=True)
 
+    #----------------------------------------------------------------------------------------#
     def configurar_aba_vetorial(self):
         # Frame para a consulta
         frame_consulta = ttk.Frame(self.tab_vetorial)
@@ -106,6 +104,7 @@ class SistemaBuscaGUI:
         self.resultados_vetorial = scrolledtext.ScrolledText(frame_resultados, height=20)
         self.resultados_vetorial.pack(fill='both', expand=True)
 
+    #----------------------------------------------------------------------------------------#
     def configurar_aba_arquivos(self):
         # Frame para lista de arquivos
         frame_lista = ttk.Frame(self.tab_arquivos)
@@ -120,14 +119,13 @@ class SistemaBuscaGUI:
         frame_botoes.pack(fill='x', padx=10, pady=5)
 
         # Botões para gerenciar documentos
-        ttk.Button(frame_botoes, text="Abrir Pasta", 
-                  command=self.abrir_pasta_docs).pack(side='left', padx=5)
-        ttk.Button(frame_botoes, text="Reiniciar e Extrair", 
-                  command=self.reiniciar_e_extrair).pack(side='left', padx=5)
+        ttk.Button(frame_botoes, text="Abrir Pasta", command=self.abrir_pasta_docs).pack(side='left', padx=5)
+        ttk.Button(frame_botoes, text="Reiniciar e Extrair", command=self.reiniciar_e_extrair).pack(side='left', padx=5)
 
         # Carrega lista inicial
         self.atualizar_lista_arquivos()
 
+    #----------------------------------------------------------------------------------------#
     def realizar_busca_booleana(self):
         if not self.modelos_carregados:
             self.resultados_booleana.delete(1.0, tk.END)
@@ -152,6 +150,7 @@ class SistemaBuscaGUI:
             self.resultados_booleana.delete(1.0, tk.END)
             self.resultados_booleana.insert(tk.END, f"Erro na consulta: {str(e)}")
 
+    #----------------------------------------------------------------------------------------#
     def realizar_busca_vetorial(self):
         if not self.modelos_carregados:
             self.resultados_vetorial.delete(1.0, tk.END)
@@ -164,7 +163,6 @@ class SistemaBuscaGUI:
 
         try:
             resultados = self.modelo_vetorial.buscar(consulta)
-            
             self.resultados_vetorial.delete(1.0, tk.END)
             if resultados:
                 self.resultados_vetorial.insert(tk.END, f"Documentos encontrados ({len(resultados)}):\n\n")
@@ -172,28 +170,30 @@ class SistemaBuscaGUI:
                     nome_doc = self.modelo_vetorial.doc_names[doc_id]
                     info = self.modelo_vetorial.documentos[doc_id]
                     self.resultados_vetorial.insert(tk.END, 
-                        f"{i}. {nome_doc}\n\n")
+                        f"{i}. {nome_doc}\nSimilaridade: {similaridade:.3f}\n\n")
             else:
                 self.resultados_vetorial.insert(tk.END, "Nenhum documento encontrado.")
         except Exception as e:
             self.resultados_vetorial.delete(1.0, tk.END)
             self.resultados_vetorial.insert(tk.END, f"Erro na consulta: {str(e)}")
 
+    #----------------------------------------------------------------------------------------#
     def abrir_pasta_docs(self):
-        """Abre a pasta docs no Windows Explorer"""
+        # Abre a pasta docs no Windows Explorer
         if os.path.exists(self.pasta_docs):
             os.startfile(self.pasta_docs)
         else:
             tk.messagebox.showerror("Erro", "Pasta 'docs/' não encontrada!")
 
+    #----------------------------------------------------------------------------------------#
     def extrair_e_normalizar(self):
-        """Executa a extração e normalização dos documentos"""
+        # Executa a extração e normalização dos documentos
         try:
-            # 1) Extrai resumos para results/resumo/
+            # Extrai resumos para results/resumo/
             extrator = ExtratorDeResumos()
             resultado_extracao = extrator.processar_documentos()
 
-            # 2) Normaliza os arquivos de resumo gerados
+            # Normaliza os arquivos de resumo gerados
             processar_pasta_results()
 
             messagebox.showinfo("Sucesso", f"Extração concluída ({len(resultado_extracao)} arquivos) e normalização finalizada.")
@@ -209,8 +209,9 @@ class SistemaBuscaGUI:
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao processar documentos: {str(e)}")
 
+    #----------------------------------------------------------------------------------------#
     def reiniciar_e_extrair(self):
-        """Reinicia o sistema, limpa os arquivos e executa extração/normalização"""
+        # Reinicia o sistema, limpa os arquivos e executa extração/normalização
         try:
             # Confirma com o usuário
             if not messagebox.askyesno("Confirmar", 
@@ -265,6 +266,7 @@ class SistemaBuscaGUI:
         except Exception as e:
             messagebox.showerror("Erro", f"Erro ao reiniciar sistema: {str(e)}")
 
+    #----------------------------------------------------------------------------------------#
     def atualizar_lista_arquivos(self):
         try:
             self.lista_arquivos.delete(1.0, tk.END)
@@ -287,6 +289,7 @@ class SistemaBuscaGUI:
             self.lista_arquivos.delete(1.0, tk.END)
             self.lista_arquivos.insert(tk.END, f"Erro ao listar arquivos: {str(e)}")
 
+#----------------------------------------------------------------------------------------#
 def main():
     root = tk.Tk()
     app = SistemaBuscaGUI(root)
