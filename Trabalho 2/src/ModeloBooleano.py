@@ -16,7 +16,7 @@ class ModeloBooleano:
         src_dir = os.path.dirname(__file__)
         raiz = os.path.abspath(os.path.join(src_dir, '..'))
         freq_json_path = os.path.join(raiz, 'results', 'frequencies_summary.json')
-        # Novo formato simples esperado: { "Doc.pdf": [[termo, frequencia], ...], ... }
+        
         with open(freq_json_path, 'r', encoding='utf-8') as f:
             dados = json.load(f)
 
