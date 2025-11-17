@@ -51,14 +51,19 @@ class ExtratorDeResumos:
         return ' '.join(palavras).strip()
 
     #----------------------------------------------------------------------------------------#
-    def processar_documentos(self) -> List[Dict[str, str]]:
+    def processar_documentos(self, arquivos_para_processar: List[str] = None) -> List[Dict[str, str]]:
         resultados = []
 
         if not os.path.exists(self.pasta_docs):
             logging.error("Pasta de documentos não encontrada: %s", self.pasta_docs)
             return resultados
 
-        for nome in sorted(os.listdir(self.pasta_docs)):
+        if arquivos_para_processar:
+            lista_arquivos = sorted(arquivos_para_processar)
+        else:
+            lista_arquivos = sorted(os.listdir(self.pasta_docs))
+
+        for nome in lista_arquivos:
             if not nome.lower().endswith('.pdf'):
                 continue
 
@@ -92,9 +97,43 @@ class ExtratorDeResumos:
         return resultados
 
 #----------------------------------------------------------------------------------------#
-def extrair_resumos() -> List[Dict[str, str]]:
+    def processar_documento_unico(self, caminho_pdf: str) -> Dict[str, str]:
+        """Processa um único arquivo PDF e salva seu resumo."""
+        if not os.path.exists(caminho_pdf):
+            logging.error("Arquivo PDF não encontrado: %s", caminho_pdf)
+            return {}
+
+        nome = os.path.basename(caminho_pdf)
+        logging.info("Processando arquivo único: %s", nome)
+        try:
+            texto = self._extrair_texto_pdf(caminho_pdf)
+            resumo = self._extrair_resumo_de_texto(texto)
+            if resumo:
+                nome_saida = os.path.splitext(nome)[0] + '_resumo.txt'
+                caminho_saida = os.path.join(self.pasta_resumo, nome_saida)
+                with open(caminho_saida, 'w', encoding='utf-8') as f:
+                    f.write(resumo)
+                logging.info("Resumo salvo para arquivo único: %s", nome_saida)
+                return {'nome_arquivo': nome, 'texto': resumo}
+            else:
+                # Fallback para arquivo único
+                palavras_doc = texto.split()
+                if palavras_doc:
+                    fallback = ' '.join(palavras_doc[:self.fallback_palavras])
+                    nome_saida = os.path.splitext(nome)[0] + '_resumo.txt'
+                    caminho_saida = os.path.join(self.pasta_resumo, nome_saida)
+                    with open(caminho_saida, 'w', encoding='utf-8') as f:
+                        f.write(fallback)
+                    logging.info("Resumo não encontrado; fallback salvo para arquivo único: %s", nome_saida)
+                    return {'nome_arquivo': nome, 'texto': fallback, 'fallback': True}
+        except Exception:
+            logging.exception("Erro ao processar arquivo único %s", nome)
+        return {}
+
+    #----------------------------------------------------------------------------------------#
+def extrair_resumos(arquivos_para_processar: List[str] = None) -> List[Dict[str, str]]:
     extrator = ExtratorDeResumos()
-    return extrator.processar_documentos()
+    return extrator.processar_documentos(arquivos_para_processar)
 
 #----------------------------------------------------------------------------------------#
 if __name__ == '__main__':

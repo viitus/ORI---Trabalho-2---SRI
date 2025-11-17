@@ -31,7 +31,7 @@ def apagar_conteudo(p: Path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Apaga todo o conteúdo da pasta results (não remove a própria pasta).")
+    parser = argparse.ArgumentParser(description="Apaga todo o conteúdo das pastas 'results' e 'data'.")
     parser.add_argument("--path", "-p", default=None, help="Caminho para a pasta results. Se omitido, usa ../results relativo ao script.")
     parser.add_argument("--yes", "-y", action="store_true", help="Executa sem pedir confirmação.")
     parser.add_argument("--whatif", action="store_true", help="Lista o que seria removido sem apagar.")
@@ -40,6 +40,7 @@ def main():
     script_dir = Path(__file__).resolve().parent
     default_results = (script_dir / '..' / 'results').resolve()
     results_path = Path(args.path).resolve() if args.path else default_results
+    data_path = (script_dir / '..' / 'data').resolve()
 
     if not results_path.exists():
         print(f"Pasta não existe: {results_path}")
@@ -47,8 +48,14 @@ def main():
 
     print(f"Local alvo: {results_path}")
     items = listar_conteudo(results_path)
-    if not items:
-        print("Nada a remover.")
+
+    print(f"Local alvo: {data_path}")
+    items_data = []
+    if data_path.exists():
+        items_data = listar_conteudo(data_path)
+
+    if not items and not items_data:
+        print("Nenhum conteúdo para remover.")
         return
 
     if args.whatif:
@@ -56,13 +63,17 @@ def main():
         return
 
     if not args.yes:
-        resp = input("Confirma remoção de TODOS os arquivos e subpastas acima? [s/N]: ").strip().lower()
+        resp = input("Confirma remoção de TODOS os arquivos e subpastas de 'results' e 'data'? [s/N]: ").strip().lower()
         if resp not in ("s", "sim"):
             print("Operação cancelada pelo usuário.")
             return
 
     files, dirs = apagar_conteudo(results_path)
     print(f"Removidos: {files} arquivos e {dirs} pastas de {results_path}")
+
+    if data_path.exists():
+        files2, dirs2 = apagar_conteudo(data_path)
+        print(f"Removidos: {files2} arquivos e {dirs2} pastas de {data_path}")
 
 
 if __name__ == '__main__':

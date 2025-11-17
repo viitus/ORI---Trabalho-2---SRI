@@ -2,6 +2,7 @@ import os
 import re
 import unicodedata
 import json
+from typing import List
 from collections import Counter
 
 #----------------------------------------------------------------------------------------#
@@ -85,7 +86,7 @@ def normalizar_arquivo(caminho_entrada: str, caminho_saida: str, stopwords: set)
 	return Counter(tokens_norm)
 
 #----------------------------------------------------------------------------------------#
-def processar_pasta_results():
+def processar_pasta_results(apenas_novos: List[str] = None):
 	src_dir = os.path.dirname(__file__)
 	raiz = os.path.abspath(os.path.join(src_dir, '..'))
 	pasta_results = os.path.join(raiz, 'results')
@@ -96,11 +97,22 @@ def processar_pasta_results():
 	stopwords = carregar_stopwords(caminho_stop)
 	os.makedirs(pasta_normalizado, exist_ok=True)
 
-	resumo_freqs = {}
-	for nome in os.listdir(pasta_resumos):
+	# Carrega o JSON existente se estivermos atualizando
+	freq_json_path = os.path.join(pasta_results, 'frequencies_summary.json')
+	dados_simples = {}
+	if apenas_novos and os.path.exists(freq_json_path):
+		try:
+			with open(freq_json_path, 'r', encoding='utf-8') as jf:
+				dados_simples = json.load(jf)
+		except (json.JSONDecodeError, FileNotFoundError):
+			print("Arquivo frequencies_summary.json não encontrado ou corrompido. Criando um novo.")
+			dados_simples = {}
+
+	arquivos_a_processar = apenas_novos if apenas_novos else os.listdir(pasta_resumos)
+
+	for nome in arquivos_a_processar:
 		if not nome.lower().endswith('.txt'):
 			continue
-		caminho = os.path.join(pasta_resumos, nome)
 
 		# Constrói o nome do arquivo de saída como "Arquivo_termos.txt"
 		if nome.lower().endswith('_resumo.txt'):
@@ -108,28 +120,20 @@ def processar_pasta_results():
 		else:
 			base_nome = os.path.splitext(nome)[0]
 		saida_nome = f"{base_nome}_termos.txt"
+
+		caminho = os.path.join(pasta_resumos, nome)
 		caminho_saida = os.path.join(pasta_normalizado, saida_nome)
+
 		try:
-			freqs = normalizar_arquivo(caminho, caminho_saida, stopwords)
-			resumo_freqs[nome] = freqs
-			print(f"Arquivo normalizado: {nome} (termos únicos: {len(freqs)})")
+			freqs = normalizar_arquivo(caminho, caminho_saida, stopwords) # freqs é um Counter
+			
+			pdf_nome = f"{base_nome}.pdf"
+			freq_list = [[t, c] for t, c in freqs.most_common()]
+			dados_simples[pdf_nome] = freq_list
+
+			print(f"Arquivo normalizado e adicionado ao índice: {nome} (termos únicos: {len(freqs)})")
 		except Exception as e:
 			print(f"Erro ao normalizar {nome}: {e}")
-
-	# salvar frequências em JSON em results/frequencies_summary.json
-	freq_json_path = os.path.join(pasta_results, 'frequencies_summary.json')
-	dados_simples = {}
-	for nome, freqs in resumo_freqs.items():
-		# nome típico: "Documento_resumo.txt". Queremos mapear para "Documento.pdf"
-		if nome.lower().endswith('_resumo.txt'):
-			base = nome[:-len('_resumo.txt')]
-		else:
-			base = os.path.splitext(nome)[0]
-		pdf_nome = base
-
-		# freqs is a Counter -> converte para lista de pares [term, count]
-		freq_list = [[t, c] for t, c in freqs.most_common()]
-		dados_simples[pdf_nome] = freq_list
 
 	# Escreve o JSON simples
 	with open(freq_json_path, 'w', encoding='utf-8') as jf:

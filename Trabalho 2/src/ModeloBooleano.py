@@ -23,7 +23,7 @@ class ModeloBooleano:
         # Constrói índice invertido: termo -> conjunto de document names (PDF)
         for pdf_nome, freq_list in dados.items():
             # Usamos o nome do PDF como o identificador do documento (doc_id)
-            doc_id = pdf_nome
+            doc_id = pdf_nome if pdf_nome.endswith('.pdf') else f"{pdf_nome}.pdf"
             self.doc_ids[pdf_nome] = doc_id
             self.doc_names[doc_id] = pdf_nome
 

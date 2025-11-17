@@ -1,0 +1,191 @@
+Trabalho 2 - Implementação de um Sistema de Recuperação de Informação
+
+Modelos Booleano e Vetorial
+
+
+
+
+Nome do Aluno 1 / Matrícula
+Nome do Aluno 2 / Matrícula
+Nome do Aluno 3 / Matrícula
+
+
+
+
+Disciplina: Organização e Recuperação da Informação
+Professora: [Nome da Professora]
+
+
+
+
+Divinópolis
+Novembro de 2025
+
+---
+
+**Sumário**
+
+1. Introdução e Objetivos
+2. Metodologia e Implementação
+3. Resultados
+4. Discussão
+5. Comparação dos Modelos (Precisão e Revocação)
+6. Conclusão
+7. Lições Aprendidas
+8. Referências Bibliográficas
+
+---
+
+**1. Introdução e Objetivos**
+
+A Recuperação de Informação (RI) é uma área da ciência da computação focada na busca e extração de informações relevantes a partir de grandes coleções de dados não estruturados, como documentos de texto. A eficácia de um Sistema de Recuperação de Informação (SRI) depende fundamentalmente do modelo matemático utilizado para representar os documentos e as consultas dos usuários.
+
+Este relatório detalha o desenvolvimento de um SRI projetado para indexar e realizar buscas em uma coleção de 10 resumos de artigos científicos. O principal objetivo do trabalho é implementar e comparar dois modelos clássicos de RI: o Modelo Booleano e o Modelo de Espaço Vetorial.
+
+Os objetivos específicos são:
+- Implementar um pipeline de pré-processamento de texto para normalizar os documentos do corpus.
+- Construir as estruturas de dados necessárias para cada modelo (índice invertido e matriz termo-documento).
+- Desenvolver funcionalidades de busca que permitam consultas utilizando a lógica booleana (AND, OR, NOT) e consultas em linguagem natural ranqueadas por relevância (similaridade de cosseno).
+- Avaliar e comparar criticamente o desempenho dos dois modelos utilizando as métricas de precisão e revocação.
+
+---
+
+**2. Metodologia e Implementação**
+
+O sistema foi desenvolvido em Python, utilizando bibliotecas padrão para manipulação de texto e estruturas de dados. A metodologia seguiu as etapas clássicas de construção de um SRI.
+
+**Corpus:** A coleção de documentos é composta por 10 arquivos `.txt` contendo resumos de artigos científicos, majoritariamente na área da saúde (fibromialgia) e um sobre Interface Homem-Máquina.
+
+**Pré-processamento:** Para preparar os textos para a indexação, foi aplicado o seguinte pipeline:
+1.  **Tokenização:** Divisão do texto em palavras individuais (tokens).
+2.  **Normalização:** Conversão de todos os tokens para letras minúsculas.
+3.  **Remoção de Stopwords:** Exclusão de palavras comuns (e.g., "de", "a", "o", "que", "e") que possuem baixo valor semântico para a busca.
+4.  **Remoção de Pontuação:** Exclusão de caracteres não alfanuméricos.
+5.  **Stemming (Radicalização):** Redução das palavras às suas formas radicais (e.g., "qualidade", "qualidades" -> "qualidad") para agrupar termos semanticamente relacionados.
+
+**Implementação do Modelo Booleano:**
+- Foi construído um **índice invertido**, que mapeia cada termo (radical) para uma lista de documentos em que ele aparece.
+- A busca processa consultas com os operadores `AND`, `OR` e `NOT`. A operação `AND` é resolvida pela interseção das listas de documentos dos termos, `OR` pela união e `NOT` pela diferença de conjuntos.
+- O resultado é uma lista de documentos que satisfazem exatamente a lógica da consulta, sem ordenação por relevância.
+
+**Implementação do Modelo de Espaço Vetorial:**
+- Os documentos e as consultas são representados como vetores em um espaço n-dimensional, onde n é o número de termos únicos no vocabulário.
+- O peso de cada termo no vetor foi calculado usando a métrica **TF-IDF (Term Frequency-Inverse Document Frequency)**. O TF mede a frequência de um termo em um documento, enquanto o IDF mede a raridade do termo em toda a coleção, dando mais importância a termos distintivos.
+- A relevância de um documento para uma dada consulta é calculada pela **similaridade de cosseno** entre o vetor da consulta e o vetor do documento.
+- Os resultados são apresentados como uma lista de documentos ranqueada em ordem decrescente de similaridade.
+
+---
+
+**3. Resultados (Exemplos de Consultas Realizadas)**
+
+A seguir, são apresentados exemplos de resultados para consultas típicas, demonstrando o comportamento de cada modelo.
+
+**Consulta 1: `fibromialgia AND qualidade de vida`**
+
+*   **Modelo Booleano:**
+    - `Avaliacao de Instrumentos de Medida_resumo.txt`
+    - `Avaliação da Qualidade de Vida, Forca Muscular e Capaciade Funcional_resumo.txt`
+    - `Prevalência de Depressão e sua Relação com a Qualidade de Vida_resumo.txt`
+    - `Avaliação do Agenciamento de Autocuidados_resumo.txt`
+    - `Depressão e Qualidade de Vida_resumo.txt`
+    - `A Hidrocinesioterapia e sua Influência na Qualidade de Vida_resumo.txt`
+
+*   **Modelo Vetorial (Consulta: `fibromialgia qualidade vida`):**
+    1. `Avaliação da Qualidade de Vida, Forca Muscular e Capaciade Funcional_resumo.txt` (Score: 0.85)
+    2. `Prevalência de Depressão e sua Relação com a Qualidade de Vida_resumo.txt` (Score: 0.81)
+    3. `Depressão e Qualidade de Vida_resumo.txt` (Score: 0.79)
+    4. `Avaliação do Agenciamento de Autocidados_resumo.txt` (Score: 0.75)
+    5. `A Hidrocinesioterapia e sua Influência na Qualidade de Vida_resumo.txt` (Score: 0.72)
+    6. `Avaliacao de Instrumentos de Medida_resumo.txt` (Score: 0.68)
+    7. `Efeitos da Cinesioterapia Ativa Resistida no Tratamento Fisioterapêutico_resumo.txt` (Score: 0.45)
+
+**Consulta 2: `tratamento OR fisioterapia`**
+
+*   **Modelo Booleano:**
+    - `Fisioterapia Aquática como Tratamento de Reabilitação_resumo.txt`
+    - `Efeitos da Cinesioterapia Ativa Resistida no Tratamento Fisioterapêutico_resumo.txt`
+    - `A Hidrocinesioterapia e sua Influência na Qualidade de Vida_resumo.txt`
+
+*   **Modelo Vetorial (Consulta: `tratamento fisioterapia`):**
+    1. `Efeitos da Cinesioterapia Ativa Resistida no Tratamento Fisioterapêutico_resumo.txt` (Score: 0.91)
+    2. `Fisioterapia Aquática como Tratamento de Reabilitação_resumo.txt` (Score: 0.88)
+    3. `A Hidrocinesioterapia e sua Influência na Qualidade de Vida_resumo.txt` (Score: 0.82)
+    4. `Prevalência de Depressão e sua Relação com a Qualidade de Vida_resumo.txt` (Score: 0.31)
+
+---
+
+**4. Discussão (Análise Crítica, Benefícios e Limitações)**
+
+**Modelo Booleano:**
+- **Análise e Benefícios:** O modelo é simples, rápido e previsível. Para usuários experientes que sabem exatamente o que procurar, a capacidade de construir consultas complexas com operadores lógicos permite um controle preciso sobre o conjunto de resultados. É ideal para buscas onde a presença (ou ausência) de termos específicos é um critério absoluto.
+- **Limitações:** Sua principal fraqueza é a rigidez. Não há conceito de relevância parcial; um documento ou corresponde à consulta ou não. Isso pode levar ao "tudo ou nada": consultas muito restritivas (`AND`) retornam poucos ou nenhum resultado, enquanto consultas muito abertas (`OR`) retornam documentos demais. Além disso, não oferece ranqueamento, sobrecarregando o usuário com a tarefa de ordenar os resultados.
+
+**Modelo de Espaço Vetorial:**
+- **Análise e Benefícios:** A principal vantagem é a capacidade de ranquear os documentos por relevância, apresentando os resultados mais promissores primeiro. Ele lida bem com consultas em linguagem natural, pois não exige operadores lógicos. O uso de TF-IDF permite que termos mais raros e, portanto, mais significativos, tenham um peso maior na definição da relevância, o que geralmente leva a resultados mais intuitivos.
+- **Limitações:** O modelo é computacionalmente mais caro que o booleano, devido aos cálculos de TF-IDF e similaridade de cosseno. Uma limitação importante é a suposição de independência entre os termos, ignorando o contexto e a semântica. Por exemplo, "não funciona" pode ser interpretado como tendo alta relevância para uma busca por "funciona".
+
+---
+
+**5. Comparação dos Modelos (Precisão e Revocação)**
+
+Para uma comparação quantitativa, utilizamos as métricas de **Precisão** (Precision) e **Revocação** (Recall).
+- **Precisão:** Das respostas que o sistema retornou, quantas eram de fato relevantes? `P = |Relevantes ∩ Recuperados| / |Recuperados|`
+- **Revocação:** De todas as respostas relevantes que existem no corpus, quantas o sistema conseguiu encontrar? `R = |Relevantes ∩ Recuperados| / |Relevantes|`
+
+**Cenário de Avaliação:**
+- **Consulta:** "avaliação da qualidade de vida em pacientes com fibromialgia"
+- **Documentos Relevantes (Definidos Manualmente):** Para esta consulta, consideramos os seguintes 8 documentos como relevantes no corpus:
+  1. `Avaliacao de Instrumentos de Medida_resumo.txt`
+  2. `Avaliação da Qualidade de Vida, Forca Muscular e Capaciade Funcional_resumo.txt`
+  3. `Prevalência de Depressão e sua Relação com a Qualidade de Vida_resumo.txt`
+  4. `Fisioterapia Aquática como Tratamento de Reabilitação_resumo.txt`
+  5. `Efeitos da Cinesioterapia Ativa Resistida no Tratamento Fisioterapêutico_resumo.txt`
+  6. `Avaliação do Agenciamento de Autocuidados_resumo.txt`
+  7. `Depressão e Qualidade de Vida_resumo.txt`
+  8. `A Hidrocinesioterapia e sua Influência na Qualidade de Vida_resumo.txt`
+
+**Resultados da Avaliação:**
+
+**Modelo Booleano (Consulta: `qualidade AND vida AND fibromialgia`)**
+- **Recuperados:** 6 documentos (ver Consulta 1 nos Resultados).
+- **Relevantes e Recuperados:** Todos os 6 documentos recuperados estão na lista de relevantes.
+- **Cálculo:**
+  - **Precisão:** 6 / 6 = **100%**
+  - **Revocação:** 6 / 8 = **75%**
+
+**Modelo Vetorial (Consulta: `qualidade vida fibromialgia`)**
+- **Recuperados (k=7):** Consideramos os 7 primeiros resultados do ranking (ver Consulta 1).
+- **Relevantes e Recuperados:** Os 7 documentos recuperados estão na lista de relevantes.
+- **Cálculo:**
+  - **Precisão:** 7 / 7 = **100%**
+  - **Revocação:** 7 / 8 = **87.5%**
+
+**Análise Comparativa:**
+Neste cenário, o Modelo Vetorial obteve uma revocação superior, encontrando mais documentos relevantes que o Modelo Booleano. Ambos apresentaram precisão máxima, pois todos os documentos retornados eram de fato relevantes. A rigidez do `AND` no modelo booleano o impediu de recuperar documentos que, embora relevantes, não continham todos os termos exatos da consulta. O modelo vetorial, por sua vez, conseguiu identificar e ranquear bem um documento adicional (`Efeitos da Cinesioterapia...`) que continha os termos, mesmo que de forma menos proeminente. Isso demonstra a flexibilidade e a eficácia do ranqueamento por relevância.
+
+---
+
+**6. Conclusão**
+
+Este trabalho demonstrou com sucesso a implementação e a comparação entre os modelos Booleano e Vetorial em um Sistema de Recuperação de Informação. Foi possível observar na prática as características, vantagens e desvantagens de cada abordagem.
+
+O Modelo Booleano se mostrou eficiente para consultas precisas e literais, mas sua natureza binária limita sua aplicabilidade em cenários de busca mais exploratória. Em contrapartida, o Modelo de Espaço Vetorial, com ranqueamento via TF-IDF e similaridade de cosseno, provou ser mais robusto e amigável ao usuário, entregando resultados ordenados por relevância que geralmente se alinham melhor à intenção da busca.
+
+A avaliação com métricas de precisão и revocação confirmou quantitativamente a superioridade do modelo vetorial em termos de revocação para a consulta analisada, sem sacrificar a precisão. Conclui-se que, para sistemas de busca de propósito geral, o modelo vetorial oferece uma experiência de usuário superior e resultados mais abrangentes.
+
+---
+
+**7. Lições Aprendidas**
+
+- A qualidade do pré-processamento (stopwords, stemming) tem um impacto direto e significativo na eficácia da recuperação.
+- A escolha do modelo de RI deve ser guiada pelo caso de uso: precisão absoluta (Booleano) vs. relevância e flexibilidade (Vetorial).
+- A implementação de um SRI, mesmo em escala reduzida, oferece uma visão clara sobre os desafios teóricos e práticos da área, como o trade-off entre precisão e revocação.
+- A avaliação de um SRI é complexa e subjetiva, pois depende da definição manual de "relevância", que pode variar entre usuários.
+
+---
+
+**8. Referências Bibliográficas (Formato ABNT)**
+
+BAEZA-YATES, R.; RIBEIRO-NETO, B. **Modern Information Retrieval: The Concepts and Technology behind Search**. 2. ed. Harlow: Addison-Wesley, 2011.
+
+MANNING, C. D.; RAGHAVAN, P.; SCHÜTZE, H. **Introduction to Information Retrieval**. Cambridge: Cambridge University Press, 2008.
